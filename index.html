@@ -1,0 +1,1767 @@
+<!-- CONTEÚDO PARA WORDPRESS (cole em uma Página / editor HTML). Removido <!DOCTYPE>, <html>, <head>, <body>. -->
+<div style="margin:0; font-family:Arial, Helvetica, sans-serif; background:#000000; color:#f5f5f5; scroll-behavior:smooth; position:relative; min-height:100vh; width:100%; overflow-x:hidden;">
+  <!-- Padrão dourado de fundo fixo -->
+  <div style="position:fixed; top:0; left:0; width:100%; height:100%; background:radial-gradient(circle at 20% 80%, rgba(255,215,0,0.02), transparent 70%), radial-gradient(circle at 80% 20%, rgba(218,165,32,0.015), transparent 70%); pointer-events:none; z-index:-1;"></div>
+  <style>
+    /* === Reset Global e Fundo Preto === */
+    *{margin:0; padding:0; box-sizing:border-box;}
+    html{background:#000000 !important; color:#f5f5f5; min-height:100vh; overflow-x:hidden;}
+    body{background:#000000 !important; color:#f5f5f5; margin:0; padding:0; min-height:100vh;}
+    :root{background-color:#000000 !important;}
+    
+    /* === Animações Globais (CSS embutido, sem JS) === */
+  /* Base existente refinada + novas animações luxuosas */
+  /* Slideshow hero melhorado: cada slide ~8s visível, 1.5s fade */
+  @keyframes heroFade {0%{opacity:1}28%{opacity:1}33%{opacity:0}95%{opacity:0}100%{opacity:1}}
+  @keyframes rise {0%{opacity:0;transform:translateY(30px) scale(.98); filter:blur(3px)}70%{filter:blur(0)}100%{opacity:1;transform:translateY(0) scale(1)}}
+  @keyframes pop {0%{opacity:0;transform:scale(.82) translateY(18px)}60%{opacity:1;transform:scale(1.04) translateY(-4px)}100%{opacity:1;transform:scale(1) translateY(0)}}
+  @keyframes glowPulse {0%{box-shadow:0 0 0 0 rgba(255,215,0,.55)}65%{box-shadow:0 0 0 26px rgba(255,215,0,0)}100%{box-shadow:0 0 0 0 rgba(255,215,0,0)}}
+  @keyframes floatY {0%{transform:translateY(0)}50%{transform:translateY(-12px)}100%{transform:translateY(0)}}
+  @keyframes slideInLeft {0%{opacity:0;transform:translateX(-70px) scale(.96); filter:blur(5px)}80%{filter:blur(0)}100%{opacity:1;transform:translateX(0) scale(1)}}
+  @keyframes slideInRight {0%{opacity:0;transform:translateX(70px) scale(.96); filter:blur(5px)}80%{filter:blur(0)}100%{opacity:1;transform:translateX(0) scale(1)}}
+  @keyframes shimmer {0%{background-position:-200% 0}100%{background-position:200% 0}}
+  @keyframes bounceIn {0%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1.06)}70%{transform:scale(.92)}100%{opacity:1;transform:scale(1)}}
+  @keyframes wiggle {0%,100%{transform:rotate(0deg)}10%,30%,50%,70%,90%{transform:rotate(-2.8deg)}20%,40%,60%,80%{transform:rotate(2.8deg)}}
+  @keyframes flipIn {0%{opacity:0;transform:rotateY(-92deg)}100%{opacity:1;transform:rotateY(0)}}
+  @keyframes gradientShift {0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+  @keyframes zoomHover {0%{transform:scale(1)}100%{transform:scale(1.08)}}
+  /* Novas */
+  @keyframes kenBurns {0%{transform:scale(1) translate(0,0)}50%{transform:scale(1.12) translate(2%,2%)}100%{transform:scale(1.22) translate(-2%,-2%)}}
+  /* Novas animações chamativas */
+  @keyframes glowLoop {0%{filter:brightness(1)}50%{filter:brightness(1.25)}100%{filter:brightness(1)}}
+  @keyframes pulseBorder {0%{box-shadow:0 0 0 0 rgba(255,215,0,.5)}70%{box-shadow:0 0 32px 8px rgba(255,140,0,0)}100%{box-shadow:0 0 0 0 rgba(255,215,0,.5)}}
+  @keyframes slideUpFade {0%{opacity:0;transform:translateY(60px)}70%{opacity:1}100%{opacity:1;transform:translateY(0)}}
+  @keyframes drift {0%{transform:translateY(0) translateX(0)}50%{transform:translateY(-14px) translateX(8px)}100%{transform:translateY(0) translateX(0)}}
+  @keyframes borderFlow {0%{background-position:0 0}100%{background-position:400% 0}}
+  /* Shimmer dourado para fundos */
+  @keyframes shimmer {0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+  @keyframes headerSlideDown {0%{transform:translateY(-100%); opacity:0}100%{transform:translateY(0); opacity:1}}
+  @keyframes logoGlow {0%{box-shadow:0 4px 12px -4px rgba(255,215,0,0.5)}50%{box-shadow:0 4px 20px -2px rgba(255,215,0,0.8)}100%{box-shadow:0 4px 12px -4px rgba(255,215,0,0.5)}}
+  @keyframes navItemHover {0%{transform:translateY(0)}100%{transform:translateY(-2px)}}
+  @keyframes headerBackdrop {0%{backdrop-filter:blur(0px); background:rgba(0,0,0,0.7)}100%{backdrop-filter:blur(12px); background:rgba(0,0,0,0.95)}}
+  @keyframes brandPulse {0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
+  @keyframes chatBounce {0%{transform:scale(1)}50%{transform:scale(1.1)}100%{transform:scale(1)}}
+  @keyframes messageSlide {0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
+  @keyframes typingDots {0%{opacity:0.4}50%{opacity:1}100%{opacity:0.4}}
+  @keyframes chatPulse {0%{box-shadow:0 0 0 0 rgba(255,215,0,0.7)}70%{box-shadow:0 0 0 10px rgba(255,215,0,0)}100%{box-shadow:0 0 0 0 rgba(255,215,0,0)}}
+  @keyframes notificationBounce {0%{transform:scale(0)}50%{transform:scale(1.2)}100%{transform:scale(1)}}
+  
+  /* Novas animações para ícones sociais premium */
+  @keyframes bounceIn {0%{opacity:0; transform:scale(0.3)}50%{opacity:1; transform:scale(1.05)}70%{transform:scale(0.9)}100%{opacity:1; transform:scale(1)}}
+  @keyframes pulse {0%{transform:scale(1); opacity:1}50%{transform:scale(1.1); opacity:0.7}100%{transform:scale(1); opacity:1}}
+  @keyframes socialFloat {0%,100%{transform:translateY(0px)}50%{transform:translateY(-5px)}}
+  @keyframes socialGlow {0%,100%{box-shadow:0 8px 25px -5px rgba(37,211,102,0.6)}50%{box-shadow:0 12px 35px -5px rgba(37,211,102,0.8), 0 0 25px rgba(37,211,102,0.4)}}
+  @keyframes socialShimmer {0%{transform:translateX(-100%) rotate(45deg)}100%{transform:translateX(100%) rotate(45deg)}}
+  
+  /* Estilos para ícones sociais premium */
+  .social-icon-container {animation:socialFloat 3s ease-in-out infinite}
+  .social-icon-container:nth-child(2) {animation-delay:0.5s}
+  .social-icon-container:nth-child(3) {animation-delay:1s}
+  .whatsapp-btn:hover {transform:scale(1.15) rotate(5deg) !important; box-shadow:0 15px 40px -5px rgba(37,211,102,0.9), 0 0 30px rgba(37,211,102,0.6) !important}
+  .instagram-btn:hover {transform:scale(1.15) rotate(-5deg) !important; box-shadow:0 12px 35px -5px rgba(214,41,118,0.9) !important}
+  .facebook-btn:hover {transform:scale(1.15) rotate(5deg) !important; box-shadow:0 12px 35px -5px rgba(24,119,242,0.9) !important}
+  .social-icon-container:hover .social-tooltip {opacity:1 !important; transform:translateY(-50%) translateX(-10px) !important}
+  /* Sheen revisado: passa e some (evita ficar travado) */
+  @keyframes sheenPass {0%{transform:translateX(-160%) skewX(-18deg); opacity:0}8%{opacity:0}15%{opacity:1}50%{opacity:1}58%{opacity:0}100%{transform:translateX(160%) skewX(-18deg); opacity:0}}
+  @keyframes goldGlowSoft {0%{box-shadow:0 0 0 0 rgba(255,215,0,.4)}50%{box-shadow:0 0 14px 2px rgba(255,215,0,.7)}100%{box-shadow:0 0 0 0 rgba(255,215,0,.4)}}
+  /* Revelação suave via JS */
+  .reveal{opacity:0; transform:translateY(40px); transition:opacity .9s cubic-bezier(.19,1,.22,1), transform .9s cubic-bezier(.19,1,.22,1);} 
+  .reveal.in{opacity:1; transform:none;}
+  /* Ajustes de estabilidade para flip */
+  .anim-flip{backface-visibility:hidden; transform-style:preserve-3d;}
+  /* Evita sumir conteúdo se animação falhar */
+  .anim-flip{opacity:1;}
+  /* Corrige delays em elementos sem animação JS ainda visíveis */
+  [class*='delay-']{will-change:transform,opacity;}
+    
+    /* Slideshow Hero */
+    .hero-slideshow{position:absolute; inset:0; overflow:hidden; border-radius:0;}
+  .hero-slideshow div{position:absolute; inset:0; background-size:cover; background-position:center; background-repeat:no-repeat; opacity:0; animation:heroFade 30s linear infinite, kenBurns 30s ease-in-out infinite; will-change:transform,opacity;}
+    .hero-slideshow div:nth-child(1){animation-delay:0s}
+    .hero-slideshow div:nth-child(2){animation-delay:10s}
+    .hero-slideshow div:nth-child(3){animation-delay:20s}
+    .hero-overlay{position:absolute; inset:0; background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.45)); mix-blend-mode:normal;}
+    
+    /* Classes de Animação */
+  .anim-rise{animation:rise .9s cubic-bezier(.25,.9,.35,1) forwards;}
+  .anim-rise-del1{animation:rise .95s cubic-bezier(.25,.9,.35,1) forwards .15s; opacity:1; animation-fill-mode:both;}
+  .anim-rise-del2{animation:rise 1s cubic-bezier(.25,.9,.35,1) forwards .3s; opacity:1; animation-fill-mode:both;}
+  .anim-rise-del3{animation:rise 1s cubic-bezier(.25,.9,.35,1) forwards .45s; opacity:1; animation-fill-mode:both;}
+  .anim-pop{animation:pop .85s cubic-bezier(.19,1,.22,1) forwards;}
+  .anim-slide-left{animation:slideInLeft .95s cubic-bezier(.19,1,.22,1) forwards;}
+  .anim-slide-right{animation:slideInRight .95s cubic-bezier(.19,1,.22,1) forwards;}
+    .anim-bounce{animation:bounceIn 1.2s ease forwards;}
+    .anim-flip{animation:flipIn .8s ease forwards;}
+    .pulse-btn{animation:glowPulse 3.5s ease-in-out infinite;}
+    .float-y{animation:floatY 6s ease-in-out infinite;}
+    .wiggle-hover:hover{animation:wiggle .5s ease-in-out;}
+  .anim-fade-blur{animation:fadeInBlur 1s ease forwards;}
+  .gold-glow-soft{animation:goldGlowSoft 4s ease-in-out infinite;}
+  .anim-seq > *{opacity:1; animation:fadeInBlur .9s cubic-bezier(.25,.9,.35,1) forwards; animation-fill-mode:both;}
+  .anim-seq > *:nth-child(1){animation-delay:.05s}
+  .anim-seq > *:nth-child(2){animation-delay:.15s}
+  .anim-seq > *:nth-child(3){animation-delay:.25s}
+  .anim-seq > *:nth-child(4){animation-delay:.35s}
+  .gold-sheen{position:relative; display:inline-block;}
+  .gold-sheen:after{content:""; position:absolute; top:0; left:0; width:55%; height:100%; background:linear-gradient(70deg,transparent,rgba(255,255,255,.55),transparent); mix-blend-mode:screen; animation:sheenPass 5.5s linear infinite; opacity:0; pointer-events:none; will-change:transform,opacity;}
+  /* Classes novas */
+  .loop-glow{animation:glowLoop 4.5s ease-in-out infinite;}
+  .pulse-border{animation:pulseBorder 5.5s ease-in-out infinite;}
+  .drift{animation:drift 9s ease-in-out infinite;}
+  .anim-slideUpFade{animation:slideUpFade 1.1s cubic-bezier(.2,.85,.25,1) forwards; opacity:0;}
+  
+  /* Header Animations */
+  .header-animated{animation:headerSlideDown 0.8s cubic-bezier(.25,.9,.35,1) forwards;}
+  .logo-glow{animation:logoGlow 3s ease-in-out infinite;}
+  .brand-pulse:hover{animation:brandPulse 0.6s ease-in-out;}
+  .nav-item{transition:all 0.3s cubic-bezier(.25,.9,.35,1); position:relative; overflow:hidden;}
+  .nav-item:hover{transform:translateY(-2px); box-shadow:0 6px 20px -6px rgba(255,215,0,0.6);}
+  .nav-item:before{content:''; position:absolute; top:0; left:-100%; width:100%; height:1px; background:linear-gradient(90deg, transparent, #FFD700, transparent); transition:left 0.5s ease;}
+  .nav-item:hover:before{left:100%;}
+  .header-backdrop{animation:headerBackdrop 0.8s ease forwards; backdrop-filter:blur(12px);}
+  .shimmer-line{position:relative; overflow:hidden;}
+  .shimmer-line:after{content:''; position:absolute; top:0; left:-100%; width:100%; height:2px; background:linear-gradient(90deg, transparent, rgba(255,215,0,0.8), transparent); animation:shimmerLine 3s ease-in-out infinite;}
+  
+  /* === CHATBOT STYLES === */
+  .chatbot-container{position:fixed; bottom:20px; left:20px; z-index:1000; font-family:'Poppins', Arial, sans-serif;}
+  .chat-toggle{width:60px; height:60px; border-radius:50%; background:linear-gradient(135deg,#FFD700,#FFA500); border:none; box-shadow:0 8px 25px -8px rgba(255,215,0,0.6); cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:24px; animation:chatPulse 2s infinite; transition:all 0.3s ease;}
+  .chat-toggle:hover{transform:scale(1.1);}
+  .chat-window{position:absolute; bottom:70px; left:0; width:350px; height:500px; background:linear-gradient(145deg,#1a1a1a,#000000); border:2px solid #FFD700; border-radius:20px; box-shadow:0 20px 60px -10px rgba(0,0,0,0.8); display:none; flex-direction:column; overflow:hidden;}
+  .chat-header{background:linear-gradient(135deg,#FFD700,#FFA500); color:#000; padding:15px 20px; display:flex; align-items:center; gap:12px; font-weight:700;}
+  .chat-header img{width:35px; height:35px; border-radius:50%; border:2px solid #000;}
+  .chat-messages{flex:1; padding:15px; overflow-y:auto; display:flex; flex-direction:column; gap:12px;}
+  .chat-messages::-webkit-scrollbar{width:4px;}
+  .chat-messages::-webkit-scrollbar-track{background:#1a1a1a;}
+  .chat-messages::-webkit-scrollbar-thumb{background:#FFD700; border-radius:4px;}
+  .message{max-width:80%; padding:12px 15px; border-radius:18px; font-size:14px; line-height:1.4; animation:messageSlide 0.3s ease; word-wrap:break-word;}
+  .message.bot{background:linear-gradient(135deg,#FFD700,#FFA500); color:#000; align-self:flex-start; border-bottom-left-radius:4px;}
+  .message-time{font-size:10px; color:#666; text-align:right; margin-top:5px; opacity:0.8;}
+  .message.user{background:#333; color:#fff; align-self:flex-end; border-bottom-right-radius:4px;}
+  .message .action-buttons{display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;}
+  .action-btn{background:rgba(0,0,0,0.8); color:#FFD700; border:1px solid rgba(255,215,0,0.5); padding:6px 12px; border-radius:15px; font-size:12px; cursor:pointer; transition:all 0.3s ease; text-decoration:none; display:inline-block;}
+  .action-btn:hover{background:#FFD700; color:#000; transform:translateY(-1px);}
+  .calculator{background:rgba(0,0,0,0.1); padding:15px; border-radius:12px; margin:10px 0;}
+  .calculator input, .calculator select{background:#333; border:1px solid rgba(255,215,0,0.3); border-radius:8px; padding:8px; color:#fff; margin:5px; width:calc(50% - 10px);}
+  .quiz-option{background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); padding:10px; border-radius:12px; margin:8px 0; cursor:pointer; transition:all 0.3s ease;}
+  .quiz-option:hover{background:rgba(255,215,0,0.2); transform:translateX(5px);}
+  .avatar-container{display:flex; align-items:center; gap:8px; margin-bottom:8px;}
+  .avatar{width:30px; height:30px; border-radius:50%; border:2px solid #FFD700; animation:avatarPulse 3s infinite;}
+  @keyframes avatarPulse {0%{box-shadow:0 0 0 0 rgba(255,215,0,0.4)}50%{box-shadow:0 0 0 8px rgba(255,215,0,0)}100%{box-shadow:0 0 0 0 rgba(255,215,0,0)}}
+  .typing-indicator{display:flex; align-items:center; gap:8px; padding:12px 15px; background:rgba(255,215,0,0.1); border-radius:18px; align-self:flex-start; border-bottom-left-radius:4px;}
+  .typing-dots{display:flex; gap:4px;}
+  .typing-dots span{width:6px; height:6px; background:#FFD700; border-radius:50%; animation:typingDots 1.4s infinite;}
+  .typing-dots span:nth-child(2){animation-delay:0.2s;}
+  .typing-dots span:nth-child(3){animation-delay:0.4s;}
+  .chat-input{padding:15px; background:#1a1a1a; border-top:1px solid rgba(255,215,0,0.2);}
+  .chat-suggestions{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px;}
+  .suggestion-btn{background:rgba(255,215,0,0.1); color:#FFD700; border:1px solid rgba(255,215,0,0.3); padding:6px 12px; border-radius:15px; font-size:12px; cursor:pointer; transition:all 0.3s ease;}
+  .suggestion-btn:hover{background:#FFD700; color:#000;}
+  .input-area{display:flex; gap:10px;}
+  .input-area input{flex:1; background:#333; border:1px solid rgba(255,215,0,0.3); border-radius:20px; padding:10px 15px; color:#fff; font-size:14px; outline:none;}
+  .input-area input:focus{border-color:#FFD700;}
+  .send-btn{background:#FFD700; border:none; border-radius:50%; width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; color:#000; font-weight:bold;}
+  .notification-dot{position:absolute; top:-5px; right:-5px; width:20px; height:20px; background:#ff4444; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:12px; font-weight:bold; animation:notificationBounce 0.5s ease;}
+  .border-anim{position:relative;}
+  .border-anim:before{content:""; position:absolute; inset:0; padding:2px; border-radius:inherit; background:linear-gradient(90deg,#FFD700,#FFA500,#DAA520,#FFD700,#FFA500); background-size:400% 100%; animation:borderFlow 8s linear infinite; -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0); mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude; pointer-events:none;}
+  .btn-shine{position:relative; overflow:hidden;}
+  .btn-shine:after{content:""; position:absolute; top:0; left:0; width:55%; height:100%; background:linear-gradient(70deg,transparent,rgba(255,255,255,.8),transparent); transform:skewX(-18deg); animation:sheenPass 6s linear infinite; opacity:0; pointer-events:none; will-change:transform,opacity;}
+  /* Stagger genérico condicionado ao reveal */
+  .stagger > *{opacity:0}
+  .reveal.in .stagger > *{animation:fadeInBlur .85s cubic-bezier(.25,.9,.35,1) forwards;}
+  .reveal.in .stagger > *:nth-child(1){animation-delay:.05s}
+  .reveal.in .stagger > *:nth-child(2){animation-delay:.15s}
+  .reveal.in .stagger > *:nth-child(3){animation-delay:.25s}
+  .reveal.in .stagger > *:nth-child(4){animation-delay:.35s}
+  .reveal.in .stagger > *:nth-child(5){animation-delay:.45s}
+  .reveal.in .stagger > *:nth-child(6){animation-delay:.55s}
+  .reveal.in .stagger > *:nth-child(7){animation-delay:.65s}
+  .reveal.in .stagger > *:nth-child(8){animation-delay:.75s}
+  .reveal.in .stagger > *:nth-child(9){animation-delay:.85s}
+  .reveal.in .stagger > *:nth-child(10){animation-delay:.95s}
+  .reveal.in .stagger > *:nth-child(11){animation-delay:1.05s}
+  .reveal.in .stagger > *:nth-child(12){animation-delay:1.15s}
+    
+    /* Efeitos de Hover */
+    .hover-zoom{transition:transform .3s ease, box-shadow .3s ease;}
+    .hover-zoom:hover{transform:scale(1.05); box-shadow:0 20px 50px -10px rgba(255,215,0,0.6) !important;}
+    .hover-lift{transition:transform .3s ease, box-shadow .3s ease;}
+    .hover-lift:hover{transform:translateY(-8px); box-shadow:0 25px 60px -15px rgba(255,215,0,0.45) !important;}
+    .hover-glow{transition:box-shadow .3s ease;}
+    .hover-glow:hover{box-shadow:0 0 30px rgba(255,215,0,0.7) !important;}
+    
+    /* Gradientes Animados */
+  .bg-gradient-anim{background:linear-gradient(-45deg,#000000,#1a1a1a,#FFD700,#000000); background-size:400% 400%; animation:gradientShift 10s ease-in-out infinite;}
+    .shimmer-effect{background:linear-gradient(90deg,transparent,rgba(255,215,0,0.4),transparent); background-size:200% 100%; animation:shimmer 2s infinite;}
+    
+    /* Delays Escalonados */
+    .delay-1{animation-delay:.1s; opacity:0}
+    .delay-2{animation-delay:.2s; opacity:0}
+    .delay-3{animation-delay:.3s; opacity:0}
+    .delay-4{animation-delay:.4s; opacity:0}
+    .delay-5{animation-delay:.5s; opacity:0}
+    .delay-6{animation-delay:.6s; opacity:0}
+    
+    /* Oculta possíveis barras de rolagem horizontais de nav */
+    header nav::-webkit-scrollbar{display:none}
+    
+    /* Acessibilidade – reduz movimento */
+    @media (prefers-reduced-motion:reduce){
+      *{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition:none !important;}
+    }
+    /* Responsividade básica */
+    @media (max-width:760px){
+      h1{font-size:40px !important}
+      #hero a{font-size:14px !important; padding:14px 26px !important}
+      header nav a{font-size:10px !important; padding:8px 14px !important}
+      header div[style*='width:54px']{width:44px !important; height:44px !important}
+      .brand-pulse div{font-size:18px !important;}
+      .brand-pulse div div{font-size:8px !important;}
+      header nav{gap:4px !important;}
+      header > div{gap:20px !important; padding:12px 20px !important;}
+      
+      /* Chatbot responsivo */
+      .chatbot-container{bottom:15px; left:15px;}
+      .chat-window{width:300px; height:450px;}
+      .chat-toggle{width:50px; height:50px; font-size:20px;}
+    }
+  </style>
+
+  <!-- HEADER ELEGANTE ANIMADO PRETO & DOURADO -->
+  <header class="header-animated header-backdrop shimmer-line" style="font-family:'Poppins', Arial, sans-serif; background:rgba(0,0,0,0.95); border-bottom:2px solid #FFD700; box-shadow:0 4px 20px -8px rgba(255,215,0,0.3); position:sticky; top:0; z-index:998;">
+    <div style="max-width:1250px; margin:0 auto; padding:14px 30px; display:flex; align-items:center; gap:40px;">
+      <!-- BRAND COM LOGO MELHORADO -->
+      <div class="brand-pulse" style="display:flex; align-items:center; gap:14px; cursor:pointer;">
+        <div style="position:relative;">
+          <img src="cropped-abertura-2.jpg" alt="Logo" class="logo-glow" style="width:54px; height:54px; border-radius:12px; object-fit:cover; border:2px solid #FFD700; transition:all 0.3s ease;" />
+          <div style="position:absolute; top:-2px; right:-2px; width:16px; height:16px; background:linear-gradient(135deg,#FFD700,#FFA500); border-radius:50%; border:2px solid #000; display:flex; align-items:center; justify-content:center;">
+            <span style="font-size:8px; color:#000; font-weight:800;">✨</span>
+          </div>
+        </div>
+        <div style="line-height:1; font-weight:800; font-size:22px; letter-spacing:0.5px; color:#FFD700;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            IMPÉRIO 
+            <span style="background:linear-gradient(135deg,#FFD700,#FFA500); color:#000000; font-size:10px; font-weight:700; padding:4px 8px; border-radius:16px; letter-spacing:0.5px;">MD BEAUTY</span>
+          </div>
+          <div style="font-size:10px; font-weight:600; letter-spacing:3px; color:#B8860B; margin-top:2px; opacity:0.9;">LOUNGE PREMIUM</div>
+        </div>
+      </div>
+      
+      <!-- NAVEGAÇÃO APRIMORADA -->
+      <nav style="flex:1; display:flex; justify-content:center; gap:8px; flex-wrap:wrap;">
+        <a href="#hero" class="nav-item" style="text-decoration:none; font-size:12px; font-weight:600; letter-spacing:1px; padding:10px 18px; border-radius:30px; color:#000; background:linear-gradient(135deg,#FFD700,#FFA500); border:1px solid #FFD700; box-shadow:0 4px 15px -4px rgba(255,215,0,0.4);">Início</a>
+        <a href="#servicos" class="nav-item" style="text-decoration:none; font-size:12px; font-weight:600; letter-spacing:1px; padding:10px 18px; border-radius:30px; color:#FFD700; background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); backdrop-filter:blur(4px);">Serviços</a>
+        <a href="#combos" class="nav-item" style="text-decoration:none; font-size:12px; font-weight:600; letter-spacing:1px; padding:10px 18px; border-radius:30px; color:#FFD700; background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); backdrop-filter:blur(4px);">Combos</a>
+        <a href="#antesdepois" class="nav-item" style="text-decoration:none; font-size:12px; font-weight:600; letter-spacing:1px; padding:10px 18px; border-radius:30px; color:#FFD700; background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); backdrop-filter:blur(4px);">Portfolio</a>
+        <a href="#produtos" class="nav-item" style="text-decoration:none; font-size:12px; font-weight:600; letter-spacing:1px; padding:10px 18px; border-radius:30px; color:#FFD700; background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); backdrop-filter:blur(4px);">Produtos</a>
+        <a href="#instagram-embeds" class="nav-item" style="text-decoration:none; font-size:12px; font-weight:600; letter-spacing:1px; padding:10px 18px; border-radius:30px; color:#FFD700; background:rgba(255,215,0,0.1); border:1px solid rgba(255,215,0,0.3); backdrop-filter:blur(4px);">Instagram</a>
+      </nav>
+      
+      <!-- CTA BUTTON -->
+      <div>
+        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." style="display:inline-flex; align-items:center; gap:8px; background:linear-gradient(135deg,#FFD700,#FFA500); color:#000; padding:12px 20px; border-radius:25px; text-decoration:none; font-weight:700; font-size:12px; letter-spacing:0.5px; box-shadow:0 6px 20px -6px rgba(255,215,0,0.6); transition:all 0.3s cubic-bezier(.25,.9,.35,1); border:2px solid rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px) scale(1.05)'; this.style.boxShadow='0 8px 25px -8px rgba(255,215,0,0.8)'" onmouseout="this.style.transform=''; this.style.boxShadow='0 6px 20px -6px rgba(255,215,0,0.6)'">
+          <span style="font-size:14px;">📱</span>
+          AGENDAR
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- /HEADER -->
+
+  <!-- Hero com Slideshow CSS - Preto & Dourado -->
+  <section id="hero" style="min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:120px 20px 110px; position:relative; color:#FFD700; overflow:hidden; background:linear-gradient(135deg, #000000 0%, #1a1300 20%, #332600 40%, #1a1300 60%, #000000 80%, #0f0f0f 100%);">
+    <div class="hero-slideshow">
+  <div style="background-image:url('https://thainmaquiagem.wordpress.com/wp-content/uploads/2025/08/2aa27d66a28edbe64a1f03e9c429eac0.jpg');"></div>
+  <div style="background-image:url('https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1600');"></div>
+  <div style="background-image:url('https://images.pexels.com/photos/3993477/pexels-photo-3993477.jpeg?auto=compress&cs=tinysrgb&w=1600');"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    
+    <!-- Elementos decorativos dourados -->
+    <div style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; pointer-events:none;">
+      <div style="position:absolute; top:15%; left:8%; width:120px; height:120px; background:radial-gradient(circle, rgba(255,215,0,0.15), transparent); border-radius:50%; animation:drift 12s infinite;"></div>
+      <div style="position:absolute; top:60%; right:12%; width:180px; height:180px; background:radial-gradient(circle, rgba(255,165,0,0.1), transparent); border-radius:50%; animation:drift 15s infinite reverse;"></div>
+      <div style="position:absolute; bottom:25%; left:20%; width:100px; height:100px; background:radial-gradient(circle, rgba(218,165,32,0.2), transparent); border-radius:50%; animation:drift 10s infinite;"></div>
+      <div style="position:absolute; top:30%; right:30%; width:60px; height:60px; background:radial-gradient(circle, rgba(255,215,0,0.25), transparent); border-radius:50%; animation:drift 8s infinite;"></div>
+    </div>
+  <h1 style="font-size:60px; margin:0 0 20px; font-weight:900; letter-spacing:1px; text-shadow:0 6px 25px rgba(0,0,0,0.8); max-width:900px; color:#FFD700; opacity:1; animation:rise .9s cubic-bezier(.25,.9,.35,1) forwards;">Realce sua Beleza com<br style='display:none;'/> Toque Profissional</h1>
+    <p style="font-size:20px; max-width:760px; line-height:1.5; margin:0 0 35px; font-weight:400; text-shadow:0 4px 16px rgba(0,0,0,0.8); color:#f5f5f5; opacity:1; animation:rise .95s cubic-bezier(.25,.9,.35,1) forwards .15s; animation-fill-mode:both;">Maquiagem, cabelo, sobrancelhas e cuidados que elevam sua autoestima. Atendimentos personalizados para festas, noivas, ensaios e dia a dia.</p>
+    <div style="display:flex; gap:18px; flex-wrap:wrap; justify-content:center; opacity:1; animation:rise 1s cubic-bezier(.25,.9,.35,1) forwards .3s; animation-fill-mode:both;">
+      <a href="https://wa.me/5500000000000?text=Quero%20agendar%20um%20hor%C3%A1rio" class="pulse-btn btn-shine" style="background:#FFD700; color:#000000; padding:16px 34px; border-radius:50px; font-weight:700; font-size:16px; text-decoration:none; box-shadow:0 6px 22px rgba(255,215,0,0.55);">Agende no WhatsApp</a>
+      <a href="#servicos" class="border-anim" style="background:linear-gradient(135deg,#000000,#1a1a1a,#000000); color:#FFD700; padding:16px 38px; border-radius:50px; font-weight:700; font-size:16px; text-decoration:none; box-shadow:0 8px 30px rgba(0,0,0,0.7); border:2px solid #FFD700; position:relative;">Ver Serviços</a>
+    </div>
+    <!-- Selo de avaliação -->
+    <div style="margin-top:32px; background:rgba(0,0,0,0.55); padding:10px 26px; border:1px solid rgba(255,215,0,0.35); border-radius:40px; display:flex; align-items:center; gap:12px; box-shadow:0 6px 24px -8px rgba(255,215,0,0.4); backdrop-filter:blur(6px); opacity:1; animation:rise 1s cubic-bezier(.25,.9,.35,1) forwards .45s; animation-fill-mode:both;">
+      <span style="font-size:18px; filter:drop-shadow(0 0 6px rgba(255,215,0,0.6));">★★★★★</span>
+      <strong style="letter-spacing:1px; font-size:13px; color:#FFD700;">4.9 / 120 avaliações reais</strong>
+    </div>
+    <div class="float-y" style="position:absolute; bottom:28px; font-size:14px; letter-spacing:3px; opacity:0.9; font-weight:600; color:#FFD700;">SCROLL ↓</div>
+  </section>
+
+  <!-- SOBRE / BIO PROFISSIONAL -->
+  <section id="sobre" class="reveal" data-reveal style="padding:110px 25px; background:linear-gradient(135deg,#0f0f0f 0%, #1a1300 30%, #000000 70%, #0f0f0f 100%), radial-gradient(circle at 80% 20%, rgba(255,215,0,0.05), transparent 50%); display:flex; flex-wrap:wrap; gap:60px; align-items:center; justify-content:center; position:relative;">
+    <!-- Elementos decorativos -->
+    <div style="position:absolute; top:20%; right:10%; width:200px; height:200px; background:radial-gradient(circle, rgba(255,215,0,0.08), transparent); border-radius:50%; animation:drift 20s infinite;"></div>
+    <div style="position:absolute; bottom:15%; left:5%; width:150px; height:150px; background:radial-gradient(circle, rgba(218,165,32,0.06), transparent); border-radius:50%; animation:drift 18s infinite reverse;"></div>
+    <div style="flex:1; min-width:300px; max-width:560px;">
+      <h2 class="anim-rise" style="margin:0 0 22px; font-size:48px; font-weight:800; color:#FFD700;">Sobre Mim</h2>
+      <p class="anim-rise-del1" style="margin:0 0 18px; font-size:16px; line-height:1.7; color:#f5f5f5;">Especialista em maquiagem social, noivas, produção de pele glow e design de sobrancelhas. Minha missão é revelar a beleza única de cada cliente com técnica, harmonia de tons e produtos premium.</p>
+      <p class="anim-rise-del2" style="margin:0 0 26px; font-size:15px; line-height:1.7; color:#f5f5f5; opacity:0.85;">Com mais de <strong style="color:#FFD700;">6 anos de experiência</strong> e dezenas de noivas atendidas, desenvolvi um método focado em conforto, durabilidade e acabamento fotográfico impecável.</p>
+      <div class="anim-rise-del3" style="display:flex; flex-wrap:wrap; gap:18px;">
+        <div style="flex:1; min-width:140px; background:linear-gradient(145deg,#1a1a1a,#000000); padding:18px 16px; border-radius:18px; border:1px solid rgba(255,215,0,0.2); text-align:center;">
+          <strong style="display:block; font-size:26px; color:#FFD700;">120+</strong>
+          <span style="font-size:11px; letter-spacing:1px; color:#f5f5f5;">AVALIAÇÕES</span>
+        </div>
+        <div style="flex:1; min-width:140px; background:linear-gradient(145deg,#1a1a1a,#000000); padding:18px 16px; border-radius:18px; border:1px solid rgba(255,215,0,0.2); text-align:center;">
+          <strong style="display:block; font-size:26px; color:#FFD700;">6+</strong>
+          <span style="font-size:11px; letter-spacing:1px; color:#f5f5f5;">ANOS</span>
+        </div>
+        <div style="flex:1; min-width:140px; background:linear-gradient(145deg,#1a1a1a,#000000); padding:18px 16px; border-radius:18px; border:1px solid rgba(255,215,0,0.2); text-align:center;">
+          <strong style="display:block; font-size:26px; color:#FFD700;">350+</strong>
+          <span style="font-size:11px; letter-spacing:1px; color:#f5f5f5;">CLIENTES</span>
+        </div>
+      </div>
+    </div>
+    <div style="flex:1; min-width:300px; max-width:420px; position:relative;">
+      <div style="position:absolute; inset:0; background:radial-gradient(circle at 30% 30%,rgba(255,215,0,0.22),transparent 70%); filter:blur(40px);"></div>
+      <div style="position:relative; aspect-ratio:4/5; border:2px solid #FFD700; border-radius:32px; overflow:hidden; box-shadow:0 28px 70px -20px rgba(255,215,0,0.4); background:#000;">
+        <!-- Substituir pela sua foto profissional -->
+        <img src="cropped-abertura-2.jpg" alt="Foto Profissional" style="width:100%; height:100%; object-fit:cover; display:block; filter:contrast(1.05) saturate(1.05);" />
+        <div style="position:absolute; bottom:0; left:0; right:0; padding:20px 20px 26px; background:linear-gradient(0deg,rgba(0,0,0,0.85),rgba(0,0,0,0));">
+          <strong style="display:block; font-size:18px; letter-spacing:1px; color:#FFD700;">Maquiagem de Alta Performance</strong>
+          <span style="font-size:12px; color:#f5f5f5; opacity:0.85;">Luxo . Técnica . Conforto</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO / ETAPAS -->
+  <section id="processo" class="reveal" data-reveal style="padding:100px 25px; background:linear-gradient(45deg, #000000 0%, #1a1300 25%, #332600 50%, #1a1300 75%, #000000 100%), radial-gradient(circle at 30% 80%, rgba(255,165,0,0.08), transparent 60%); text-align:center; position:relative; overflow:hidden;">
+    <!-- Padrão dourado de fundo -->
+    <div style="position:absolute; top:0; left:0; width:100%; height:100%; opacity:0.1; pointer-events:none;">
+      <div style="position:absolute; top:10%; left:10%; width:80px; height:80px; background:radial-gradient(circle, rgba(255,215,0,0.4), transparent); border-radius:50%; animation:drift 15s infinite;"></div>
+      <div style="position:absolute; top:70%; right:15%; width:120px; height:120px; background:radial-gradient(circle, rgba(218,165,32,0.3), transparent); border-radius:50%; animation:drift 18s infinite reverse;"></div>
+      <div style="position:absolute; bottom:20%; left:20%; width:60px; height:60px; background:radial-gradient(circle, rgba(255,165,0,0.5), transparent); border-radius:50%; animation:drift 12s infinite;"></div>
+    </div>
+    <h2 class="anim-rise" style="font-size:46px; margin:0 0 18px; font-weight:800; color:#FFD700;">Como Funciona</h2>
+    <p class="anim-rise-del1" style="margin:0 0 55px; font-size:16px; line-height:1.5; max-width:760px; display:inline-block; color:#f5f5f5;">Um fluxo pensado para segurança, alinhamento de expectativas e resultado impecável.</p>
+    <div class="anim-seq" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:28px; max-width:1100px; margin:0 auto;">
+      <div style="background:linear-gradient(145deg,#000000,#1a1a1a); padding:28px 22px; border-radius:26px; border:1px solid rgba(255,215,0,0.25); position:relative; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; height:5px; right:0; background:linear-gradient(90deg,#FFD700,#FFA500);"></div>
+        <strong style="display:block; font-size:15px; letter-spacing:2px; color:#FFD700; margin:0 0 10px;">1. CONTATO</strong>
+        <p style="margin:0; font-size:13px; line-height:1.5; color:#f5f5f5;">Você envia data, horário e objetivo pelo WhatsApp.</p>
+      </div>
+      <div style="background:linear-gradient(145deg,#000000,#1a1a1a); padding:28px 22px; border-radius:26px; border:1px solid rgba(255,215,0,0.25); position:relative; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; height:5px; right:0; background:linear-gradient(90deg,#FFA500,#DAA520);"></div>
+        <strong style="display:block; font-size:15px; letter-spacing:2px; color:#FFD700; margin:0 0 10px;">2. CONSULTA</strong>
+        <p style="margin:0; font-size:13px; line-height:1.5; color:#f5f5f5;">Alinho estilo, referências, pele e possíveis alergias.</p>
+      </div>
+      <div style="background:linear-gradient(145deg,#000000,#1a1a1a); padding:28px 22px; border-radius:26px; border:1px solid rgba(255,215,0,0.25); position:relative; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; height:5px; right:0; background:linear-gradient(90deg,#DAA520,#FFD700);"></div>
+        <strong style="display:block; font-size:15px; letter-spacing:2px; color:#FFD700; margin:0 0 10px;">3. EXECUÇÃO</strong>
+        <p style="margin:0; font-size:13px; line-height:1.5; color:#f5f5f5;">Skin care, construção estratégica e acabamento fotográfico.</p>
+      </div>
+      <div style="background:linear-gradient(145deg,#000000,#1a1a1a); padding:28px 22px; border-radius:26px; border:1px solid rgba(255,215,0,0.25); position:relative; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; height:5px; right:0; background:linear-gradient(90deg,#FFD700,#FFA500);"></div>
+        <strong style="display:block; font-size:15px; letter-spacing:2px; color:#FFD700; margin:0 0 10px;">4. FINALIZAÇÃO</strong>
+        <p style="margin:0; font-size:13px; line-height:1.5; color:#f5f5f5;">Ajustes finos, fotos e orientações de durabilidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destaques Rápidos - Preto & Dourado -->
+  <section class="reveal" data-reveal style="display:flex; gap:25px; flex-wrap:wrap; justify-content:center; max-width:1200px; margin:-70px auto 40px; padding:0 25px; position:relative; z-index:10;">
+    <div class="anim-pop" style="flex:1; min-width:240px; background:linear-gradient(145deg,#1a1a1a,#000000); border-radius:22px; padding:28px 24px; box-shadow:0 15px 40px -8px rgba(255,215,0,0.35); text-align:center; border:1px solid rgba(255,215,0,0.2);">
+      <h3 style="margin:0 0 8px; font-size:20px; color:#FFD700;">Atendimento VIP</h3>
+      <p style="margin:0; font-size:14px; line-height:1.4; color:#f5f5f5;">Horários flexíveis e atenção total a você.</p>
+    </div>
+    <div class="anim-pop" style="flex:1; min-width:240px; background:linear-gradient(145deg,#1a1a1a,#000000); border-radius:22px; padding:28px 24px; box-shadow:0 15px 40px -8px rgba(255,215,0,0.35); text-align:center; animation-delay:.12s; opacity:0; border:1px solid rgba(255,215,0,0.2);">
+      <h3 style="margin:0 0 8px; font-size:20px; color:#FFD700;">Profissionais Certificados</h3>
+      <p style="margin:0; font-size:14px; line-height:1.4; color:#f5f5f5;">Experiência, técnica e sensibilidade estética.</p>
+    </div>
+    <div class="anim-pop" style="flex:1; min-width:240px; background:linear-gradient(145deg,#1a1a1a,#000000); border-radius:22px; padding:28px 24px; box-shadow:0 15px 40px -8px rgba(255,215,0,0.35); text-align:center; animation-delay:.24s; opacity:0; border:1px solid rgba(255,215,0,0.2);">
+      <h3 style="margin:0 0 8px; font-size:20px; color:#FFD700;">Produtos Premium</h3>
+      <p style="margin:0; font-size:14px; line-height:1.4; color:#f5f5f5;">Marcas hipoalergênicas e alta durabilidade.</p>
+    </div>
+  </section>
+
+  <!-- Serviços & Preços - Preto & Dourado -->
+  <section id="servicos" class="reveal" data-reveal style="padding:100px 25px; background:linear-gradient(135deg, #000000 0%, #0f0f0f 20%, #1a1300 40%, #0f0f0f 60%, #000000 80%), radial-gradient(circle at 70% 30%, rgba(255,215,0,0.06), transparent 70%); text-align:center; position:relative; overflow:hidden;">
+    <!-- Brilhos dourados -->
+    <div style="position:absolute; top:0; left:0; width:100%; height:100%; opacity:0.15; pointer-events:none;">
+      <div style="position:absolute; top:20%; left:5%; width:150px; height:150px; background:radial-gradient(circle, rgba(255,215,0,0.3), transparent); border-radius:50%; animation:drift 25s infinite;"></div>
+      <div style="position:absolute; bottom:30%; right:8%; width:200px; height:200px; background:radial-gradient(circle, rgba(218,165,32,0.2), transparent); border-radius:50%; animation:drift 20s infinite reverse;"></div>
+      <div style="position:absolute; top:60%; left:40%; width:100px; height:100px; background:radial-gradient(circle, rgba(255,165,0,0.25), transparent); border-radius:50%; animation:drift 18s infinite;"></div>
+    </div>
+    <h2 class="anim-rise" style="font-size:48px; margin:0 0 15px; font-weight:800; color:#FFD700; letter-spacing:1px;">Serviços & Preços</h2>
+    <p class="anim-rise-del1" style="margin:0 0 50px; font-size:17px; max-width:760px; line-height:1.5; display:inline-block; color:#f5f5f5;">Escolha o serviço ideal para seu momento. Excelência, higiene e acabamento impecável em cada detalhe.</p>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:34px; max-width:1250px; margin:0 auto;">
+      <div class="anim-slide-left hover-lift delay-1" style="flex:1; min-width:250px; max-width:280px; background:linear-gradient(145deg,#000000,#1a1a1a); border-radius:26px; padding:34px 28px; box-shadow:0 12px 38px -10px rgba(255,215,0,0.4); position:relative; overflow:hidden; border:1px solid rgba(255,215,0,0.3);">
+        <div style="position:absolute; top:0; left:0; right:0; height:6px; background:linear-gradient(90deg,#FFD700,#FFA500,#FFD700);"></div>
+        <h3 style="margin:10px 0 8px; font-size:22px; color:#FFD700;">Maquiagem Social</h3>
+        <p style="margin:0 0 16px; font-size:14px; line-height:1.5; color:#f5f5f5;">Look para festas, formaturas e eventos especiais.</p>
+        <strong style="display:block; font-size:28px; color:#FFD700;">R$ 120</strong>
+      </div>
+      <div class="anim-slide-right hover-lift delay-2" style="flex:1; min-width:250px; max-width:280px; background:linear-gradient(145deg,#000000,#1a1a1a); border-radius:26px; padding:34px 28px; box-shadow:0 12px 38px -10px rgba(255,215,0,0.4); position:relative; overflow:hidden; border:1px solid rgba(255,215,0,0.3);">
+        <div style="position:absolute; top:0; left:0; right:0; height:6px; background:linear-gradient(90deg,#FFA500,#FFD700,#DAA520);"></div>
+        <h3 style="margin:10px 0 8px; font-size:22px; color:#FFD700;">Maquiagem Noiva</h3>
+        <p style="margin:0 0 16px; font-size:14px; line-height:1.5; color:#f5f5f5;">Make completa + preparação de pele + teste.</p>
+        <strong style="display:block; font-size:28px; color:#FFD700;">R$ 350</strong>
+      </div>
+      <div class="anim-slide-left hover-lift delay-3" style="flex:1; min-width:250px; max-width:280px; background:linear-gradient(145deg,#000000,#1a1a1a); border-radius:26px; padding:34px 28px; box-shadow:0 12px 38px -10px rgba(255,215,0,0.4); position:relative; overflow:hidden; border:1px solid rgba(255,215,0,0.3);">
+        <div style="position:absolute; top:0; left:0; right:0; height:6px; background:linear-gradient(90deg,#DAA520,#FFD700,#FFA500);"></div>
+        <h3 style="margin:10px 0 8px; font-size:22px; color:#FFD700;">Design Sobrancelha</h3>
+        <p style="margin:0 0 16px; font-size:14px; line-height:1.5; color:#f5f5f5;">Com ou sem henna / visagismo facial.</p>
+        <strong style="display:block; font-size:28px; color:#FFD700;">R$ 40</strong>
+      </div>
+      <div class="anim-slide-right hover-lift delay-4" style="flex:1; min-width:250px; max-width:280px; background:linear-gradient(145deg,#000000,#1a1a1a); border-radius:26px; padding:34px 28px; box-shadow:0 12px 38px -10px rgba(255,215,0,0.4); position:relative; overflow:hidden; border:1px solid rgba(255,215,0,0.3);">
+        <div style="position:absolute; top:0; left:0; right:0; height:6px; background:linear-gradient(90deg,#FFD700,#DAA520,#FFA500);"></div>
+        <h3 style="margin:10px 0 8px; font-size:22px; color:#FFD700;">Penteado</h3>
+        <p style="margin:0 0 16px; font-size:14px; line-height:1.5; color:#f5f5f5;">Coques, ondas, semi preso, tranças e noiva.</p>
+        <strong style="display:block; font-size:28px; color:#FFD700;">R$ 150</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Combos - Preto & Dourado -->
+  <section id="combos" class="reveal" data-reveal style="padding:90px 25px; background:linear-gradient(-45deg, #000000 0%, #1a1300 20%, #332600 40%, #1a1300 60%, #000000 80%), radial-gradient(circle at 20% 70%, rgba(255,215,0,0.08), transparent 60%); text-align:center; position:relative; overflow:hidden;">
+    <!-- Partículas douradas -->
+    <div style="position:absolute; inset:0; opacity:0.12; pointer-events:none;">
+      <div style="position:absolute; top:25%; right:10%; width:80px; height:80px; background:radial-gradient(circle, rgba(255,215,0,0.6), transparent); border-radius:50%; animation:drift 14s infinite;"></div>
+      <div style="position:absolute; bottom:40%; left:15%; width:120px; height:120px; background:radial-gradient(circle, rgba(218,165,32,0.4), transparent); border-radius:50%; animation:drift 16s infinite reverse;"></div>
+      <div style="position:absolute; top:10%; left:30%; width:60px; height:60px; background:radial-gradient(circle, rgba(255,165,0,0.5), transparent); border-radius:50%; animation:drift 12s infinite;"></div>
+    </div>
+    <h2 style="font-size:46px; margin:0 0 18px; font-weight:800; color:#FFD700;">Combos Exclusivos</h2>
+    <p style="margin:0 0 55px; font-size:16px; max-width:760px; line-height:1.5; display:inline-block; color:#f5f5f5;">Economize com pacotes pensados para ocasiões especiais, ensaios e eventos de grande impacto.</p>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:38px; max-width:1200px; margin:0 auto;">
+      <div style="flex:1; min-width:260px; max-width:310px; background:linear-gradient(150deg,#FFD700,#FFA500,#DAA520); color:#000000; border-radius:30px; padding:40px 32px; box-shadow:0 18px 45px -12px rgba(255,215,0,0.55); position:relative;">
+        <div style="position:absolute; top:14px; right:14px; background:#000000; color:#FFD700; font-size:11px; font-weight:800; padding:6px 12px; border-radius:20px; letter-spacing:1px;">+ POPULAR</div>
+        <h3 style="margin:0 0 10px; font-size:24px; font-weight:800;">Make + Cabelo</h3>
+        <p style="margin:0 0 18px; font-size:14px; line-height:1.5; font-weight:500;">Maquiagem completa + penteado simples.</p>
+        <strong style="font-size:34px; display:block; margin-bottom:18px; font-weight:900;">R$ 230</strong>
+        <a href="https://wa.me/5500000000000?text=Quero%20o%20combo%20Make%20%2B%20Cabelo" style="display:inline-block; background:#000000; color:#FFD700; padding:14px 26px; font-weight:700; border-radius:40px; text-decoration:none; box-shadow:0 8px 24px rgba(0,0,0,0.6);">Agendar</a>
+      </div>
+      <div style="flex:1; min-width:260px; max-width:310px; background:linear-gradient(145deg,#1a1a1a,#000000); border-radius:30px; padding:40px 32px; box-shadow:0 18px 45px -12px rgba(255,215,0,0.25); border:1px solid rgba(255,215,0,0.3);">
+        <h3 style="margin:0 0 10px; font-size:24px; color:#FFD700;">Noiva Premium</h3>
+        <p style="margin:0 0 18px; font-size:14px; line-height:1.5; color:#f5f5f5;">Teste prévio + make HD + cabelo + skin care.</p>
+        <strong style="font-size:34px; display:block; margin-bottom:18px; color:#FFD700;">R$ 680</strong>
+        <a href="https://wa.me/5500000000000?text=Quero%20o%20combo%20Noiva%20Premium" style="display:inline-block; background:#FFD700; color:#000000; padding:14px 26px; font-weight:700; border-radius:40px; text-decoration:none; box-shadow:0 10px 28px -4px rgba(255,215,0,0.55);">Agendar</a>
+      </div>
+      <div style="flex:1; min-width:260px; max-width:310px; background:linear-gradient(145deg,#1a1a1a,#000000); border-radius:30px; padding:40px 32px; box-shadow:0 18px 45px -12px rgba(255,215,0,0.25); border:1px solid rgba(255,215,0,0.3);">
+        <h3 style="margin:0 0 10px; font-size:24px; color:#FFD700;">Boudoir / Ensaio</h3>
+        <p style="margin:0 0 18px; font-size:14px; line-height:1.5; color:#f5f5f5;">Maquiagem intensa + modelagem cabelo.</p>
+        <strong style="font-size:34px; display:block; margin-bottom:18px; color:#FFD700;">R$ 260</strong>
+        <a href="https://wa.me/5500000000000?text=Quero%20o%20combo%20Ensaio" style="display:inline-block; background:#FFD700; color:#000000; padding:14px 26px; font-weight:700; border-radius:40px; text-decoration:none; box-shadow:0 10px 28px -4px rgba(255,215,0,0.55);">Agendar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Antes & Depois - Preto & Dourado -->
+  <section id="antesdepois" class="reveal" data-reveal style="padding:95px 25px; background:linear-gradient(135deg, #000000 0%, #0f0f0f 25%, #1a1300 50%, #0f0f0f 75%, #000000 100%), radial-gradient(circle at 80% 20%, rgba(255,215,0,0.06), transparent 70%); text-align:center; position:relative; overflow:hidden;">
+    <!-- Efeito shimmer dourado -->
+    <div style="position:absolute; top:0; left:0; width:100%; height:100%; opacity:0.1; pointer-events:none;">
+      <div style="position:absolute; top:30%; left:10%; width:100px; height:100px; background:radial-gradient(circle, rgba(255,215,0,0.3), transparent); border-radius:50%; animation:drift 20s infinite;"></div>
+      <div style="position:absolute; bottom:25%; right:12%; width:140px; height:140px; background:radial-gradient(circle, rgba(218,165,32,0.25), transparent); border-radius:50%; animation:drift 22s infinite reverse;"></div>
+    </div>
+    <h2 style="font-size:46px; margin:0 0 14px; font-weight:800; color:#FFD700;">Antes & Depois</h2>
+    <p style="margin:0 0 50px; font-size:16px; line-height:1.5; max-width:740px; display:inline-block; color:#f5f5f5;">Transformações reais de clientes que confiaram em nosso trabalho. Resultado natural, luminosidade e harmonia facial.</p>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:26px; max-width:1300px; margin:0 auto;">
+      <div style="width:260px; background:linear-gradient(145deg,#2a2a2a,#1a1a1a); border-radius:22px; overflow:hidden; box-shadow:0 10px 30px -8px rgba(255,215,0,0.35); border:1px solid rgba(255,215,0,0.2);">
+        <img src="https://thainmaquiagem.wordpress.com/wp-content/uploads/2025/08/oig3-edited-1.jpg" alt="Antes" style="width:100%; display:block; filter:grayscale(25%);">
+        <img src="https://thainmaquiagem.wordpress.com/wp-content/uploads/2022/12/oig2.jpg" alt="Depois" style="width:100%; display:block;">
+      </div>
+      <div style="width:260px; background:linear-gradient(145deg,#2a2a2a,#1a1a1a); border-radius:22px; overflow:hidden; box-shadow:0 10px 30px -8px rgba(255,215,0,0.35); border:1px solid rgba(255,215,0,0.2);">
+        <img src="https://thainmaquiagem.wordpress.com/wp-content/uploads/2022/12/oig2-1.jpg" alt="Antes" style="width:100%; display:block; filter:grayscale(25%);">
+        <img src="https://thainmaquiagem.wordpress.com/wp-content/uploads/2022/12/304880037_600318041814333_8369788057006568674_n.jpg" alt="Depois" style="width:100%; display:block;">
+      </div>
+      <div style="width:260px; background:linear-gradient(145deg,#2a2a2a,#1a1a1a); border-radius:22px; overflow:hidden; box-shadow:0 10px 30px -8px rgba(255,215,0,0.35); border:1px solid rgba(255,215,0,0.2);">
+  <img loading="lazy" src="https://images.pexels.com/photos/853427/pexels-photo-853427.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Antes" style="width:100%; display:block; filter:grayscale(25%);">
+  <img loading="lazy" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Depois" style="width:100%; display:block;">
+      </div>
+      <div style="width:260px; background:linear-gradient(145deg,#2a2a2a,#1a1a1a); border-radius:22px; overflow:hidden; box-shadow:0 10px 30px -8px rgba(255,215,0,0.35); border:1px solid rgba(255,215,0,0.2);">
+  <img loading="lazy" src="https://images.pexels.com/photos/704815/pexels-photo-704815.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Antes" style="width:100%; display:block; filter:grayscale(25%);">
+  <img loading="lazy" src="https://images.pexels.com/photos/3065205/pexels-photo-3065205.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Depois" style="width:100%; display:block;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Produtos Destaque - Preto & Dourado -->
+  <section id="produtos" class="reveal" data-reveal style="padding:90px 25px; background:linear-gradient(45deg, #000000 0%, #1a1300 30%, #000000 60%, #0f0f0f 100%), radial-gradient(circle at 30% 80%, rgba(255,215,0,0.05), transparent 70%); text-align:center; position:relative; overflow:hidden;">
+    <!-- Padrão dourado de luxo -->
+    <div style="position:absolute; inset:0; opacity:0.08; pointer-events:none;">
+      <div style="position:absolute; top:20%; right:15%; width:160px; height:160px; background:radial-gradient(circle, rgba(255,215,0,0.4), transparent); border-radius:50%; animation:drift 28s infinite;"></div>
+      <div style="position:absolute; bottom:30%; left:10%; width:120px; height:120px; background:radial-gradient(circle, rgba(218,165,32,0.3), transparent); border-radius:50%; animation:drift 24s infinite reverse;"></div>
+      <div style="position:absolute; top:60%; left:50%; width:80px; height:80px; background:radial-gradient(circle, rgba(255,165,0,0.35), transparent); border-radius:50%; animation:drift 20s infinite;"></div>
+    </div>
+    <h2 class="anim-bounce" style="font-size:46px; margin:0 0 16px; font-weight:800; color:#FFD700;">Produtos Premium</h2>
+    <p class="anim-rise-del1" style="margin:0 0 55px; font-size:16px; line-height:1.5; max-width:760px; display:inline-block; color:#f5f5f5;">Revenda autorizada de marcas selecionadas. Qualidade, pigmentação e cuidado com a pele em cada item.</p>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:34px; max-width:1250px; margin:0 auto;">
+  <div class="anim-flip hover-zoom wiggle-hover reveal" data-reveal style="flex:1; min-width:240px; max-width:250px; background:linear-gradient(145deg,#000000,#1a1a1a); border-radius:24px; padding:26px 22px; box-shadow:0 12px 34px -10px rgba(255,215,0,0.4); border:1px solid rgba(255,215,0,0.2);">
+  <img loading="lazy" src="https://images.pexels.com/photos/3993477/pexels-photo-3993477.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Paleta de Sombras" style="width:100%; border-radius:16px; margin-bottom:14px;">
+        <h3 style="margin:0 0 6px; font-size:18px; color:#FFD700;">Paleta Profissional</h3>
+        <p style="margin:0 0 10px; font-size:13px; line-height:1.4; color:#f5f5f5;">Alta pigmentação e longa duração.</p>
+        <strong style="color:#FFD700; font-size:20px;">R$ 149</strong>
+      </div>
+  <div class="anim-flip hover-zoom wiggle-hover reveal" data-reveal style="flex:1; min-width:240px; max-width:250px; background:linear-gradient(145deg,#000000,#1a1a1a); border-radius:24px; padding:26px 22px; box-shadow:0 12px 34px -10px rgba(255,215,0,0.4); border:1px solid rgba(255,215,0,0.2);">
+  <img loading="lazy" src="https://images.pexels.com/photos/8361425/pexels-photo-8361425.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Kit Pincéis" style="width:100%; border-radius:16px; margin-bottom:14px;">
+        <h3 style="margin:0 0 6px; font-size:18px; color:#FFD700;">Kit Pincéis 12x</h3>
+        <p style="margin:0 0 10px; font-size:13px; line-height:1.4; color:#f5f5f5;">Cerdas macias e precisão.</p>
+        <strong style="color:#FFD700; font-size:20px;">R$ 199</strong>
+      </div>
+  <div class="anim-flip hover-zoom wiggle-hover reveal" data-reveal style="flex:1; min-width:240px; max-width:250px; background:linear-gradient(145deg,#000000,#1a1a1a); border-radius:24px; padding:26px 22px; box-shadow:0 12px 34px -10px rgba(255,215,0,0.4); border:1px solid rgba(255,215,0,0.2);">
+  <img loading="lazy" src="https://images.pexels.com/photos/3865675/pexels-photo-3865675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Batom Líquido" style="width:100%; border-radius:16px; margin-bottom:14px;">
+        <h3 style="margin:0 0 6px; font-size:18px; color:#FFD700;">Batom Matte</h3>
+        <p style="margin:0 0 10px; font-size:13px; line-height:1.4; color:#f5f5f5;">Secagem rápida e confortável.</p>
+        <strong style="color:#FFD700; font-size:20px;">R$ 59</strong>
+      </div>
+  <div class="anim-flip hover-zoom wiggle-hover reveal" data-reveal style="flex:1; min-width:240px; max-width:250px; background:linear-gradient(145deg,#000000,#1a1a1a); border-radius:24px; padding:26px 22px; box-shadow:0 12px 34px -10px rgba(255,215,0,0.4); border:1px solid rgba(255,215,0,0.2);">
+  <img loading="lazy" src="https://images.pexels.com/photos/3735632/pexels-photo-3735632.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Base Facial" style="width:100%; border-radius:16px; margin-bottom:14px;">
+        <h3 style="margin:0 0 6px; font-size:18px; color:#FFD700;">Base HD</h3>
+        <p style="margin:0 0 10px; font-size:13px; line-height:1.4; color:#f5f5f5;">Cobertura média modulável.</p>
+        <strong style="color:#FFD700; font-size:20px;">R$ 129</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Avaliações Google -->
+  <section class="reveal" data-reveal style="padding:80px 25px; background:linear-gradient(135deg, #000000 0%, #0f0f0f 30%, #1a1300 60%, #000000 100%), radial-gradient(circle at 50% 50%, rgba(255,215,0,0.06), transparent 80%); text-align:center; position:relative; overflow:hidden;">
+    <!-- Brilho central dourado -->
+    <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:300px; height:300px; background:radial-gradient(circle, rgba(255,215,0,0.08), transparent); border-radius:50%; animation:glowLoop 8s infinite;"></div>
+    <h2 style="font-size:44px; margin:0 0 16px; font-weight:800; color:#FFD700;">Avaliações Google</h2>
+    <div style="display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:45px;">
+      <div style="font-size:28px; color:#FFD700;">⭐⭐⭐⭐⭐</div>
+      <span style="font-size:22px; font-weight:700; color:#FFD700;">4.9</span>
+      <span style="font-size:14px; color:#f5f5f5;">(127 avaliações)</span>
+    </div>
+    <div style="display:grid; gap:24px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); max-width:1200px; margin:0 auto;">
+      <div style="background:linear-gradient(145deg,#1a1a1a,#000); border:1px solid rgba(255,215,0,0.2); border-radius:20px; padding:24px; text-align:left;">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+          <div style="width:32px; height:32px; border-radius:50%; background:#4285f4; display:flex; align-items:center; justify-content:center; font-weight:700; color:white; font-size:12px;">G</div>
+          <div>
+            <strong style="color:#FFD700; font-size:14px;">Maria Silva</strong>
+            <div style="color:#FFD700; font-size:12px;">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <p style="color:#f5f5f5; font-size:13px; line-height:1.5; margin:0;">"Atendimento excepcional! Profissional muito competente e resultados incríveis. Recomendo!"</p>
+      </div>
+      <div style="background:linear-gradient(145deg,#1a1a1a,#000); border:1px solid rgba(255,215,0,0.2); border-radius:20px; padding:24px; text-align:left;">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+          <div style="width:32px; height:32px; border-radius:50%; background:#4285f4; display:flex; align-items:center; justify-content:center; font-weight:700; color:white; font-size:12px;">G</div>
+          <div>
+            <strong style="color:#FFD700; font-size:14px;">Ana Costa</strong>
+            <div style="color:#FFD700; font-size:12px;">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <p style="color:#f5f5f5; font-size:13px; line-height:1.5; margin:0;">"Melhor investimento que fiz! Técnica impecável e ambiente muito acolhedor."</p>
+      </div>
+      <div style="background:linear-gradient(145deg,#1a1a1a,#000); border:1px solid rgba(255,215,0,0.2); border-radius:20px; padding:24px; text-align:left;">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+          <div style="width:32px; height:32px; border-radius:50%; background:#4285f4; display:flex; align-items:center; justify-content:center; font-weight:700; color:white; font-size:12px;">G</div>
+          <div>
+            <strong style="color:#FFD700; font-size:14px;">Carla Mendes</strong>
+            <div style="color:#FFD700; font-size:12px;">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <p style="color:#f5f5f5; font-size:13px; line-height:1.5; margin:0;">"Sempre saio satisfeita! Profissionalismo e qualidade em cada atendimento."</p>
+      </div>
+    </div>
+    <div style="margin-top:35px;">
+      <a href="https://g.page/r/SEU_LINK_GOOGLE_BUSINESS" target="_blank" style="display:inline-block; background:linear-gradient(135deg,#4285f4,#1a73e8); color:white; padding:12px 28px; border-radius:30px; font-weight:600; text-decoration:none; font-size:14px;">Ver Todas no Google</a>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="reveal" data-reveal style="padding:95px 25px; background:linear-gradient(135deg,#000000,#1a1a1a); text-align:center; position:relative;">
+    <div aria-hidden="true" style="position:absolute; inset:0; background:radial-gradient(circle at 20% 30%,rgba(255,215,0,0.08),transparent 60%),radial-gradient(circle at 80% 70%,rgba(255,165,0,0.08),transparent 60%); pointer-events:none; mix-blend-mode:screen;"></div>
+    <h2 style="font-size:46px; margin:0 0 18px; font-weight:800; color:#FFD700;">O Que Dizem</h2>
+    <p style="margin:0 0 55px; font-size:16px; line-height:1.5; max-width:760px; display:inline-block; color:#f5f5f5;">A experiência de quem já viveu a transformação e recomenda.</p>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:34px; max-width:1250px; margin:0 auto;">
+      <div class="hover-lift" style="flex:1; min-width:260px; max-width:320px; background:linear-gradient(145deg,#1a1a1a,#000000); color:#f5f5f5; border-radius:28px; padding:34px 28px; box-shadow:0 16px 46px -14px rgba(255,215,0,0.35); text-align:left; position:relative; border:1px solid rgba(255,215,0,0.2);">
+        <div style="font-size:70px; line-height:40px; position:absolute; top:8px; right:18px; opacity:0.15; color:#FFD700;">“</div>
+        <p style="margin:0 0 18px; font-size:15px; line-height:1.6;">A maquiagem durou a festa inteira e minhas fotos ficaram incríveis! Atendimento carinhoso e profissional.</p>
+        <strong style="font-size:15px; letter-spacing:0.5px; color:#FFD700;">Carolina M.</strong>
+      </div>
+      <div class="hover-lift" style="flex:1; min-width:260px; max-width:320px; background:linear-gradient(145deg,#1a1a1a,#000000); color:#f5f5f5; border-radius:28px; padding:34px 28px; box-shadow:0 16px 46px -14px rgba(255,215,0,0.35); text-align:left; position:relative; border:1px solid rgba(255,215,0,0.2);">
+        <div style="font-size:70px; line-height:40px; position:absolute; top:8px; right:18px; opacity:0.15; color:#FFD700;">“</div>
+        <p style="margin:0 0 18px; font-size:15px; line-height:1.6;">Fiz o combo noiva e me senti segura do início ao fim. Resultado delicado e sofisticado, exatamente o que queria.</p>
+        <strong style="font-size:15px; letter-spacing:0.5px; color:#FFD700;">Mariana M.</strong>
+      </div>
+      <div class="hover-lift" style="flex:1; min-width:260px; max-width:320px; background:linear-gradient(145deg,#1a1a1a,#000000); color:#f5f5f5; border-radius:28px; padding:34px 28px; box-shadow:0 16px 46px -14px rgba(255,215,0,0.35); text-align:left; position:relative; border:1px solid rgba(255,215,0,0.2);">
+        <div style="font-size:70px; line-height:40px; position:absolute; top:8px; right:18px; opacity:0.15; color:#FFD700;">“</div>
+        <p style="margin:0 0 18px; font-size:15px; line-height:1.6;">Minha sobrancelha nunca ficou tão perfeita. Técnica suave e muito capricho. Voltarei sempre!</p>
+        <strong style="font-size:15px; letter-spacing:0.5px; color:#FFD700;">Larissa M.</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificações e Credenciais -->
+  <section class="reveal" data-reveal style="padding:80px 25px; background:linear-gradient(135deg, #0f0f0f 0%, #1a1300 25%, #332600 50%, #1a1300 75%, #000000 100%), radial-gradient(circle at 80% 30%, rgba(255,215,0,0.07), transparent 70%); text-align:center; position:relative; overflow:hidden;">
+    <!-- Elementos flutuantes dourados -->
+    <div style="position:absolute; inset:0; opacity:0.1; pointer-events:none;">
+      <div style="position:absolute; top:15%; left:8%; width:90px; height:90px; background:radial-gradient(circle, rgba(255,215,0,0.5), transparent); border-radius:50%; animation:drift 16s infinite;"></div>
+      <div style="position:absolute; bottom:20%; right:12%; width:130px; height:130px; background:radial-gradient(circle, rgba(218,165,32,0.4), transparent); border-radius:50%; animation:drift 18s infinite reverse;"></div>
+      <div style="position:absolute; top:50%; right:20%; width:70px; height:70px; background:radial-gradient(circle, rgba(255,165,0,0.6), transparent); border-radius:50%; animation:drift 14s infinite;"></div>
+    </div>
+    <h2 style="font-size:44px; margin:0 0 16px; font-weight:800; color:#FFD700;">Certificações</h2>
+    <p style="color:#f5f5f5; max-width:700px; margin:0 auto 50px; font-size:15px; line-height:1.6;">Formação técnica e cursos de aperfeiçoamento para garantir o melhor resultado.</p>
+    <div style="display:grid; gap:28px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); max-width:1000px; margin:0 auto;">
+      <div style="background:linear-gradient(145deg,#1a1a1a,#000); border:1px solid rgba(255,215,0,0.2); border-radius:18px; padding:24px 20px; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#FFD700,#FFA500);"></div>
+        <div style="width:48px; height:48px; background:linear-gradient(135deg,#FFD700,#FFA500); border-radius:50%; margin:0 auto 16px; display:flex; align-items:center; justify-content:center; font-size:20px;">🎓</div>
+        <h3 style="color:#FFD700; font-size:16px; margin:0 0 8px;">Técnico em Estética</h3>
+        <p style="color:#f5f5f5; font-size:13px; margin:0 0 8px;">SENAC - 2020</p>
+        <span style="background:rgba(255,215,0,0.1); color:#FFD700; padding:4px 12px; border-radius:12px; font-size:11px; font-weight:600;">Certificado</span>
+      </div>
+      <div style="background:linear-gradient(145deg,#1a1a1a,#000); border:1px solid rgba(255,215,0,0.2); border-radius:18px; padding:24px 20px; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#FFA500,#DAA520);"></div>
+        <div style="width:48px; height:48px; background:linear-gradient(135deg,#FFA500,#DAA520); border-radius:50%; margin:0 auto 16px; display:flex; align-items:center; justify-content:center; font-size:20px;">💄</div>
+        <h3 style="color:#FFD700; font-size:16px; margin:0 0 8px;">Micropigmentação</h3>
+        <p style="color:#f5f5f5; font-size:13px; margin:0 0 8px;">PhiAcademy - 2021</p>
+        <span style="background:rgba(255,215,0,0.1); color:#FFD700; padding:4px 12px; border-radius:12px; font-size:11px; font-weight:600;">Certificado</span>
+      </div>
+      <div style="background:linear-gradient(145deg,#1a1a1a,#000); border:1px solid rgba(255,215,0,0.2); border-radius:18px; padding:24px 20px; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#DAA520,#FFD700);"></div>
+        <div style="width:48px; height:48px; background:linear-gradient(135deg,#DAA520,#FFD700); border-radius:50%; margin:0 auto 16px; display:flex; align-items:center; justify-content:center; font-size:20px;">✨</div>
+        <h3 style="color:#FFD700; font-size:16px; margin:0 0 8px;">Maquiagem Profissional</h3>
+        <p style="color:#f5f5f5; font-size:13px; margin:0 0 8px;">Make Up For Ever - 2019</p>
+        <span style="background:rgba(255,215,0,0.1); color:#FFD700; padding:4px 12px; border-radius:12px; font-size:11px; font-weight:600;">Certificado</span>
+      </div>
+      <div style="background:linear-gradient(145deg,#1a1a1a,#000); border:1px solid rgba(255,215,0,0.2); border-radius:18px; padding:24px 20px; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#FFD700,#DAA520);"></div>
+        <div style="width:48px; height:48px; background:linear-gradient(135deg,#FFD700,#DAA520); border-radius:50%; margin:0 auto 16px; display:flex; align-items:center; justify-content:center; font-size:20px;">🎨</div>
+        <h3 style="color:#FFD700; font-size:16px; margin:0 0 8px;">Design de Sobrancelhas</h3>
+        <p style="color:#f5f5f5; font-size:13px; margin:0 0 8px;">Curso Avançado - 2022</p>
+        <span style="background:rgba(255,215,0,0.1); color:#FFD700; padding:4px 12px; border-radius:12px; font-size:11px; font-weight:600;">Certificado</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promoções Especiais -->
+  <section class="reveal" data-reveal style="padding:80px 25px; background:linear-gradient(135deg, #000000 0%, #1a1300 25%, #332600 50%, #1a1300 75%, #000000 100%), radial-gradient(circle at 30% 20%, rgba(255,215,0,0.08), transparent 70%); text-align:center; position:relative; overflow:hidden;">
+    <!-- Efeito de brilho animado -->
+    <div style="position:absolute; top:0; left:0; right:0; height:100%; background:linear-gradient(45deg, transparent 30%, rgba(255,215,0,0.06) 50%, transparent 70%); animation:shimmer 6s infinite; opacity:0.5; pointer-events:none;"></div>
+    <div style="position:absolute; inset:0; opacity:0.12; pointer-events:none;">
+      <div style="position:absolute; top:20%; left:10%; width:100px; height:100px; background:radial-gradient(circle, rgba(255,215,0,0.4), transparent); border-radius:50%; animation:drift 22s infinite;"></div>
+      <div style="position:absolute; bottom:25%; right:15%; width:150px; height:150px; background:radial-gradient(circle, rgba(218,165,32,0.3), transparent); border-radius:50%; animation:drift 26s infinite reverse;"></div>
+    </div>
+    <h2 style="font-size:44px; margin:0 0 16px; font-weight:800; color:#FFD700;">Promoções</h2>
+    <p style="color:#f5f5f5; max-width:640px; margin:0 auto 50px; font-size:15px; line-height:1.6;">Ofertas especiais por tempo limitado. Aproveite!</p>
+    <div style="display:grid; gap:32px; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); max-width:1100px; margin:0 auto;">
+      <div class="border-anim" style="background:linear-gradient(145deg,#1a1a1a,#000); border-radius:24px; padding:28px 24px; position:relative; overflow:hidden; border:2px solid transparent;">
+        <div style="position:absolute; top:12px; right:12px; background:linear-gradient(135deg,#ff4444,#cc0000); color:white; padding:6px 14px; border-radius:16px; font-size:11px; font-weight:700; letter-spacing:1px;">LIMITADO</div>
+        <div style="font-size:42px; margin:0 0 12px;">💝</div>
+        <h3 style="color:#FFD700; font-size:20px; margin:0 0 12px; font-weight:700;">Pacote Noiva Completo</h3>
+        <p style="color:#f5f5f5; font-size:14px; line-height:1.5; margin:0 0 18px;">Maquiagem + Penteado + Teste</p>
+        <div style="margin-bottom:20px;">
+          <span style="color:#888; text-decoration:line-through; font-size:16px;">R$ 450</span>
+          <span style="color:#FFD700; font-size:28px; font-weight:800; margin-left:8px;">R$ 350</span>
+        </div>
+        <button style="width:100%; background:linear-gradient(135deg,#FFD700,#FFA500); color:#000; border:none; padding:14px; border-radius:16px; font-weight:700; font-size:14px; cursor:pointer;">Quero Aproveitar</button>
+      </div>
+      <div class="border-anim" style="background:linear-gradient(145deg,#1a1a1a,#000); border-radius:24px; padding:28px 24px; position:relative; overflow:hidden; border:2px solid transparent;">
+        <div style="position:absolute; top:12px; right:12px; background:linear-gradient(135deg,#00aa44,#008833); color:white; padding:6px 14px; border-radius:16px; font-size:11px; font-weight:700; letter-spacing:1px;">VÁLIDO ATÉ 31/08</div>
+        <div style="font-size:42px; margin:0 0 12px;">👭</div>
+        <h3 style="color:#FFD700; font-size:20px; margin:0 0 12px; font-weight:700;">Traga uma Amiga</h3>
+        <p style="color:#f5f5f5; font-size:14px; line-height:1.5; margin:0 0 18px;">15% de desconto para ambas</p>
+        <div style="margin-bottom:20px;">
+          <span style="color:#FFD700; font-size:28px; font-weight:800;">15% OFF</span>
+        </div>
+        <button style="width:100%; background:linear-gradient(135deg,#00aa44,#008833); color:white; border:none; padding:14px; border-radius:16px; font-weight:700; font-size:14px; cursor:pointer;">Agendar Dupla</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Embeds Oficiais (expandível) -->
+  <section id="instagram-embeds" class="reveal" data-reveal style="padding:100px 25px; background:linear-gradient(135deg, #000000 0%, #0f0f0f 20%, #1a1300 40%, #0f0f0f 60%, #000000 80%), radial-gradient(circle at 70% 80%, rgba(255,215,0,0.05), transparent 70%); text-align:center; position:relative; overflow:hidden;">
+    <!-- Padrão de redes sociais dourado -->
+    <div style="position:absolute; inset:0; opacity:0.08; pointer-events:none;">
+      <div style="position:absolute; top:25%; left:5%; width:120px; height:120px; background:radial-gradient(circle, rgba(255,215,0,0.35), transparent); border-radius:50%; animation:drift 30s infinite;"></div>
+      <div style="position:absolute; bottom:30%; right:8%; width:180px; height:180px; background:radial-gradient(circle, rgba(218,165,32,0.25), transparent); border-radius:50%; animation:drift 35s infinite reverse;"></div>
+      <div style="position:absolute; top:60%; right:30%; width:90px; height:90px; background:radial-gradient(circle, rgba(255,165,0,0.4), transparent); border-radius:50%; animation:drift 25s infinite;"></div>
+    </div>
+    <h2 style="font-size:44px; margin:0 0 20px; font-weight:800; color:#FFD700;">Instagram</h2>
+    <p style="margin:0 0 48px; font-size:15px; line-height:1.6; max-width:840px; display:inline-block; color:#f5f5f5;">Alguns posts recentes. Clique em "Ver mais posts" para carregar mais sem poluir o início da página.</p>
+    <div class="ig-embed-flex" style="display:grid; gap:42px; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); max-width:1350px; margin:0 auto; align-items:start;">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CgAxtGSup_p/" data-instgrm-captioned data-instgrm-version="14" style="background:#FFF; border:0; border-radius:14px; box-shadow:0 0 2px 0 rgba(255,215,0,0.5),0 6px 22px -2px rgba(0,0,0,0.55); margin:0; padding:0; max-width:560px; width:100%;"><a href="https://www.instagram.com/p/CgAxtGSup_p/" target="_blank" style="display:block; text-decoration:none; color:#000;">Ver no Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C84oHU2uPI-/" data-instgrm-captioned data-instgrm-version="14" style="background:#FFF; border:0; border-radius:14px; box-shadow:0 0 2px 0 rgba(255,215,0,0.5),0 6px 22px -2px rgba(0,0,0,0.55); margin:0; padding:0; max-width:560px; width:100%;"><a href="https://www.instagram.com/p/C84oHU2uPI-/" target="_blank" style="display:block; text-decoration:none; color:#000;">Ver no Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CgIei0yl8_y/" data-instgrm-captioned data-instgrm-version="14" style="background:#FFF; border:0; border-radius:14px; box-shadow:0 0 2px 0 rgba(255,215,0,0.5),0 6px 22px -2px rgba(0,0,0,0.55); margin:0; padding:0; max-width:560px; width:100%;"><a href="https://www.instagram.com/p/CgIei0yl8_y/" target="_blank" style="display:block; text-decoration:none; color:#000;">Ver no Instagram</a></blockquote>
+      <!-- Extras ocultos -->
+      <blockquote class="instagram-media extra-ig" data-instgrm-permalink="https://www.instagram.com/p/C3Example01/" data-instgrm-captioned data-instgrm-version="14" style="display:none; background:#FFF; border:0; border-radius:14px; box-shadow:0 0 2px 0 rgba(255,215,0,0.5),0 6px 22px -2px rgba(0,0,0,0.55); margin:0; padding:0; max-width:560px; width:100%;"><a href="https://www.instagram.com/p/C3Example01/" target="_blank" style="display:block; text-decoration:none; color:#000;">Ver no Instagram</a></blockquote>
+      <blockquote class="instagram-media extra-ig" data-instgrm-permalink="https://www.instagram.com/p/C3Example02/" data-instgrm-captioned data-instgrm-version="14" style="display:none; background:#FFF; border:0; border-radius:14px; box-shadow:0 0 2px 0 rgba(255,215,0,0.5),0 6px 22px -2px rgba(0,0,0,0.55); margin:0; padding:0; max-width:560px; width:100%;"><a href="https://www.instagram.com/p/C3Example02/" target="_blank" style="display:block; text-decoration:none; color:#000;">Ver no Instagram</a></blockquote>
+      <blockquote class="instagram-media extra-ig" data-instgrm-permalink="https://www.instagram.com/p/C3Example03/" data-instgrm-captioned data-instgrm-version="14" style="display:none; background:#FFF; border:0; border-radius:14px; box-shadow:0 0 2px 0 rgba(255,215,0,0.5),0 6px 22px -2px rgba(0,0,0,0.55); margin:0; padding:0; max-width:560px; width:100%;"><a href="https://www.instagram.com/p/C3Example03/" target="_blank" style="display:block; text-decoration:none; color:#000;">Ver no Instagram</a></blockquote>
+      <blockquote class="instagram-media extra-ig" data-instgrm-permalink="https://www.instagram.com/p/C3Example04/" data-instgrm-captioned data-instgrm-version="14" style="display:none; background:#FFF; border:0; border-radius:14px; box-shadow:0 0 2px 0 rgba(255,215,0,0.5),0 6px 22px -2px rgba(0,0,0,0.55); margin:0; padding:0; max-width:560px; width:100%;"><a href="https://www.instagram.com/p/C3Example04/" target="_blank" style="display:block; text-decoration:none; color:#000;">Ver no Instagram</a></blockquote>
+      <blockquote class="instagram-media extra-ig" data-instgrm-permalink="https://www.instagram.com/p/C3Example05/" data-instgrm-captioned data-instgrm-version="14" style="display:none; background:#FFF; border:0; border-radius:14px; box-shadow:0 0 2px 0 rgba(255,215,0,0.5),0 6px 22px -2px rgba(0,0,0,0.55); margin:0; padding:0; max-width:560px; width:100%;"><a href="https://www.instagram.com/p/C3Example05/" target="_blank" style="display:block; text-decoration:none; color:#000;">Ver no Instagram</a></blockquote>
+      <blockquote class="instagram-media extra-ig" data-instgrm-permalink="https://www.instagram.com/p/C3Example06/" data-instgrm-captioned data-instgrm-version="14" style="display:none; background:#FFF; border:0; border-radius:14px; box-shadow:0 0 2px 0 rgba(255,215,0,0.5),0 6px 22px -2px rgba(0,0,0,0.55); margin:0; padding:0; max-width:560px; width:100%;"><a href="https://www.instagram.com/p/C3Example06/" target="_blank" style="display:block; text-decoration:none; color:#000;">Ver no Instagram</a></blockquote>
+    </div>
+    <button id="more-ig-btn" style="margin:54px auto 12px; display:inline-block; background:linear-gradient(90deg,#A67C00,#FFD700,#B8860B); color:#000; font-weight:700; border:none; padding:15px 44px; font-size:15px; border-radius:40px; cursor:pointer; position:relative; overflow:hidden; letter-spacing:1px; box-shadow:0 0 0 1px rgba(255,215,0,0.4), 0 10px 34px -10px rgba(255,215,0,0.55); transition:transform .45s cubic-bezier(.19,1,.22,1), box-shadow .45s;">Ver mais posts</button>
+    <!-- Fallback -->
+    <div id="ig-fallback" style="display:none; margin-top:55px;">
+      <h3 style="color:#FFD700; font-size:22px; margin:0 0 22px;">Prévia Rápida</h3>
+      <div style="display:grid; gap:22px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); max-width:1150px; margin:0 auto;">
+        <a href="https://www.instagram.com/p/CgAxtGSup_p/" target="_blank" style="text-decoration:none; background:linear-gradient(145deg,#000,#1a1a1a); border:1px solid rgba(255,215,0,.25); border-radius:20px; overflow:hidden; position:relative;">
+          <div style="aspect-ratio:1/1; background:url('https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600') center/cover;"></div>
+          <div style="padding:9px 12px; font-size:12px; color:#f5f5f5;">Abrir Post</div>
+        </a>
+        <a href="https://www.instagram.com/p/C84oHU2uPI-/" target="_blank" style="text-decoration:none; background:linear-gradient(145deg,#000,#1a1a1a); border:1px solid rgba(255,215,0,.25); border-radius:20px; overflow:hidden; position:relative;">
+          <div style="aspect-ratio:1/1; background:url('https://images.pexels.com/photos/704815/pexels-photo-704815.jpeg?auto=compress&cs=tinysrgb&w=600') center/cover;"></div>
+          <div style="padding:9px 12px; font-size:12px; color:#f5f5f5;">Abrir Post</div>
+        </a>
+        <a href="https://www.instagram.com/p/CgIei0yl8_y/" target="_blank" style="text-decoration:none; background:linear-gradient(145deg,#000,#1a1a1a); border:1px solid rgba(255,215,0,.25); border-radius:20px; overflow:hidden; position:relative;">
+          <div style="aspect-ratio:1/1; background:url('https://images.pexels.com/photos/3993477/pexels-photo-3993477.jpeg?auto=compress&cs=tinysrgb&w=600') center/cover; display:flex; align-items:center; justify-content:center; font-size:34px; color:#FFD700;">▶</div>
+          <div style="padding:9px 12px; font-size:12px; color:#f5f5f5;">Ver Vídeo</div>
+        </a>
+      </div>
+      <p style="margin:26px 0 0; font-size:12px; letter-spacing:1px; color:#888;">*Fallback exibido porque o embed do Instagram não carregou.</p>
+    </div>
+    <div style="margin-top:50px;">
+      <a href="https://instagram.com/wilianmiyai_" target="_blank" style="display:inline-block; background:linear-gradient(135deg,#FFD700,#FFA500); color:#000000; padding:14px 34px; border-radius:40px; font-weight:700; text-decoration:none; letter-spacing:1px; box-shadow:0 10px 30px -8px rgba(255,215,0,0.5);">Ver Perfil Completo</a>
+    </div>
+  </section>
+
+  <!-- Tabela de Preços Completa -->
+  <section class="reveal" data-reveal style="padding:80px 25px; background:linear-gradient(135deg, #0f0f0f 0%, #1a1300 30%, #000000 70%, #0f0f0f 100%), radial-gradient(circle at 20% 50%, rgba(255,215,0,0.06), transparent 80%); text-align:center; position:relative; overflow:hidden;">
+    <!-- Efeito dourado sutil -->
+    <div style="position:absolute; inset:0; opacity:0.1; pointer-events:none;">
+      <div style="position:absolute; top:30%; right:10%; width:140px; height:140px; background:radial-gradient(circle, rgba(255,215,0,0.3), transparent); border-radius:50%; animation:drift 32s infinite;"></div>
+      <div style="position:absolute; bottom:20%; left:12%; width:110px; height:110px; background:radial-gradient(circle, rgba(218,165,32,0.25), transparent); border-radius:50%; animation:drift 28s infinite reverse;"></div>
+    </div>
+    <h2 style="font-size:44px; margin:0 0 16px; font-weight:800; color:#FFD700;">Tabela de Preços</h2>
+    <p style="color:#f5f5f5; max-width:700px; margin:0 auto 50px; font-size:15px; line-height:1.6;">Valores transparentes para todos os serviços. Parcelamento disponível.</p>
+    <div style="display:grid; gap:24px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); max-width:1200px; margin:0 auto;">
+      
+      <!-- Maquiagem -->
+      <div style="background:linear-gradient(145deg,#1a1a1a,#000); border:1px solid rgba(255,215,0,0.2); border-radius:20px; padding:24px; text-align:left;">
+        <h3 style="color:#FFD700; font-size:18px; margin:0 0 20px; text-align:center; font-weight:700;">💄 Maquiagem</h3>
+        <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(255,215,0,0.1);">
+          <span style="color:#f5f5f5; font-size:14px;">Maquiagem Social</span>
+          <span style="color:#FFD700; font-weight:600;">R$ 80</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(255,215,0,0.1);">
+          <span style="color:#f5f5f5; font-size:14px;">Maquiagem Festa</span>
+          <span style="color:#FFD700; font-weight:600;">R$ 120</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(255,215,0,0.1);">
+          <span style="color:#f5f5f5; font-size:14px;">Maquiagem Noiva</span>
+          <span style="color:#FFD700; font-weight:600;">R$ 200</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:8px 0;">
+          <span style="color:#f5f5f5; font-size:14px;">Teste de Noiva</span>
+          <span style="color:#FFD700; font-weight:600;">R$ 100</span>
+        </div>
+      </div>
+
+      <!-- Sobrancelhas -->
+      <div style="background:linear-gradient(145deg,#1a1a1a,#000); border:1px solid rgba(255,215,0,0.2); border-radius:20px; padding:24px; text-align:left;">
+        <h3 style="color:#FFD700; font-size:18px; margin:0 0 20px; text-align:center; font-weight:700;">🎨 Sobrancelhas</h3>
+        <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(255,215,0,0.1);">
+          <span style="color:#f5f5f5; font-size:14px;">Design Completo</span>
+          <span style="color:#FFD700; font-weight:600;">R$ 45</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(255,215,0,0.1);">
+          <span style="color:#f5f5f5; font-size:14px;">Micropigmentação</span>
+          <span style="color:#FFD700; font-weight:600;">R$ 350</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(255,215,0,0.1);">
+          <span style="color:#f5f5f5; font-size:14px;">Retoque Micro</span>
+          <span style="color:#FFD700; font-weight:600;">R$ 150</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:8px 0;">
+          <span style="color:#f5f5f5; font-size:14px;">Henna + Design</span>
+          <span style="color:#FFD700; font-weight:600;">R$ 60</span>
+        </div>
+      </div>
+
+      <!-- Cílios -->
+      <div style="background:linear-gradient(145deg,#1a1a1a,#000); border:1px solid rgba(255,215,0,0.2); border-radius:20px; padding:24px; text-align:left;">
+        <h3 style="color:#FFD700; font-size:18px; margin:0 0 20px; text-align:center; font-weight:700;">👁️ Cílios</h3>
+        <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(255,215,0,0.1);">
+          <span style="color:#f5f5f5; font-size:14px;">Extensão Clássica</span>
+          <span style="color:#FFD700; font-weight:600;">R$ 80</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(255,215,0,0.1);">
+          <span style="color:#f5f5f5; font-size:14px;">Volume Russo</span>
+          <span style="color:#FFD700; font-weight:600;">R$ 120</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(255,215,0,0.1);">
+          <span style="color:#f5f5f5; font-size:14px;">Manutenção</span>
+          <span style="color:#FFD700; font-weight:600;">R$ 50</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:8px 0;">
+          <span style="color:#f5f5f5; font-size:14px;">Lifting + Tintura</span>
+          <span style="color:#FFD700; font-weight:600;">R$ 65</span>
+        </div>
+      </div>
+
+      <!-- Combos -->
+      <div style="background:linear-gradient(145deg,#1a1a1a,#000); border:1px solid rgba(255,215,0,0.3); border-radius:20px; padding:24px; text-align:left; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#FFD700,#FFA500);"></div>
+        <h3 style="color:#FFD700; font-size:18px; margin:0 0 20px; text-align:center; font-weight:700;">✨ Combos</h3>
+        <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(255,215,0,0.1);">
+          <span style="color:#f5f5f5; font-size:14px;">Make + Sobrancelha</span>
+          <span style="color:#FFD700; font-weight:600;">R$ 110</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(255,215,0,0.1);">
+          <span style="color:#f5f5f5; font-size:14px;">Noiva Completo</span>
+          <span style="color:#FFD700; font-weight:600;">R$ 350</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(255,215,0,0.1);">
+          <span style="color:#f5f5f5; font-size:14px;">Festa VIP</span>
+          <span style="color:#FFD700; font-weight:600;">R$ 180</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; padding:8px 0;">
+          <span style="color:#f5f5f5; font-size:14px;">Pacote Madrinha</span>
+          <span style="color:#FFD700; font-weight:600;">R$ 160</span>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:40px; padding:20px; background:rgba(255,215,0,0.1); border-radius:16px; max-width:600px; margin-left:auto; margin-right:auto;">
+      <h4 style="color:#FFD700; font-size:16px; margin:0 0 8px;">💳 Formas de Pagamento</h4>
+      <p style="color:#f5f5f5; font-size:14px; margin:0;">PIX • Cartão (até 6x) • Dinheiro • Transferência</p>
+    </div>
+  </section>
+
+  <!-- Galeria por Categoria -->
+  <section class="reveal" data-reveal style="padding:80px 25px; background:linear-gradient(135deg, #000000 0%, #1a1300 20%, #332600 40%, #1a1300 60%, #000000 80%), radial-gradient(circle at 50% 30%, rgba(255,215,0,0.07), transparent 70%); text-align:center; position:relative; overflow:hidden;">
+    <!-- Padrão de galeria dourado -->
+    <div style="position:absolute; inset:0; opacity:0.09; pointer-events:none;">
+      <div style="position:absolute; top:15%; left:15%; width:100px; height:100px; background:radial-gradient(circle, rgba(255,215,0,0.4), transparent); border-radius:50%; animation:drift 20s infinite;"></div>
+      <div style="position:absolute; top:70%; right:20%; width:130px; height:130px; background:radial-gradient(circle, rgba(218,165,32,0.3), transparent); border-radius:50%; animation:drift 24s infinite reverse;"></div>
+      <div style="position:absolute; bottom:40%; left:40%; width:80px; height:80px; background:radial-gradient(circle, rgba(255,165,0,0.45), transparent); border-radius:50%; animation:drift 18s infinite;"></div>
+    </div>
+    <h2 style="font-size:44px; margin:0 0 16px; font-weight:800; color:#FFD700;">Galeria</h2>
+    <p style="color:#f5f5f5; max-width:700px; margin:0 auto 40px; font-size:15px; line-height:1.6;">Trabalhos organizados por categoria. Clique para ver mais detalhes.</p>
+    
+    <!-- Filtros -->
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-bottom:50px;">
+      <button class="gallery-filter active" data-filter="all" style="background:linear-gradient(135deg,#FFD700,#FFA500); color:#000; border:none; padding:10px 20px; border-radius:20px; font-weight:600; cursor:pointer; font-size:13px;">Todos</button>
+      <button class="gallery-filter" data-filter="noivas" style="background:rgba(255,215,0,0.1); color:#FFD700; border:1px solid rgba(255,215,0,0.3); padding:10px 20px; border-radius:20px; font-weight:600; cursor:pointer; font-size:13px;">Noivas</button>
+      <button class="gallery-filter" data-filter="festas" style="background:rgba(255,215,0,0.1); color:#FFD700; border:1px solid rgba(255,215,0,0.3); padding:10px 20px; border-radius:20px; font-weight:600; cursor:pointer; font-size:13px;">Festas</button>
+      <button class="gallery-filter" data-filter="social" style="background:rgba(255,215,0,0.1); color:#FFD700; border:1px solid rgba(255,215,0,0.3); padding:10px 20px; border-radius:20px; font-weight:600; cursor:pointer; font-size:13px;">Social</button>
+      <button class="gallery-filter" data-filter="sobrancelhas" style="background:rgba(255,215,0,0.1); color:#FFD700; border:1px solid rgba(255,215,0,0.3); padding:10px 20px; border-radius:20px; font-weight:600; cursor:pointer; font-size:13px;">Sobrancelhas</button>
+    </div>
+
+    <!-- Grid da Galeria -->
+    <div id="gallery-grid" style="display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); max-width:1200px; margin:0 auto;">
+      <div class="gallery-item" data-category="noivas" style="aspect-ratio:1/1; border-radius:16px; overflow:hidden; position:relative; cursor:pointer; background:url('https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=600') center/cover;">
+        <div style="position:absolute; inset:0; background:linear-gradient(transparent 60%, rgba(0,0,0,0.8)); display:flex; align-items:end; padding:16px;">
+          <span style="color:#FFD700; font-weight:600; font-size:14px;">Noiva Clássica</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="festas" style="aspect-ratio:1/1; border-radius:16px; overflow:hidden; position:relative; cursor:pointer; background:url('https://images.pexels.com/photos/3993477/pexels-photo-3993477.jpeg?auto=compress&cs=tinysrgb&w=600') center/cover;">
+        <div style="position:absolute; inset:0; background:linear-gradient(transparent 60%, rgba(0,0,0,0.8)); display:flex; align-items:end; padding:16px;">
+          <span style="color:#FFD700; font-weight:600; font-size:14px;">Make Festa</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="sobrancelhas" style="aspect-ratio:1/1; border-radius:16px; overflow:hidden; position:relative; cursor:pointer; background:url('https://images.pexels.com/photos/3992656/pexels-photo-3992656.jpeg?auto=compress&cs=tinysrgb&w=600') center/cover;">
+        <div style="position:absolute; inset:0; background:linear-gradient(transparent 60%, rgba(0,0,0,0.8)); display:flex; align-items:end; padding:16px;">
+          <span style="color:#FFD700; font-weight:600; font-size:14px;">Design Perfeito</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="social" style="aspect-ratio:1/1; border-radius:16px; overflow:hidden; position:relative; cursor:pointer; background:url('https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600') center/cover;">
+        <div style="position:absolute; inset:0; background:linear-gradient(transparent 60%, rgba(0,0,0,0.8)); display:flex; align-items:end; padding:16px;">
+          <span style="color:#FFD700; font-weight:600; font-size:14px;">Look Natural</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="noivas" style="aspect-ratio:1/1; border-radius:16px; overflow:hidden; position:relative; cursor:pointer; background:url('https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=600') center/cover;">
+        <div style="position:absolute; inset:0; background:linear-gradient(transparent 60%, rgba(0,0,0,0.8)); display:flex; align-items:end; padding:16px;">
+          <span style="color:#FFD700; font-weight:600; font-size:14px;">Noiva Moderna</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="festas" style="aspect-ratio:1/1; border-radius:16px; overflow:hidden; position:relative; cursor:pointer; background:url('https://images.pexels.com/photos/3992656/pexels-photo-3992656.jpeg?auto=compress&cs=tinysrgb&w=600') center/cover;">
+        <div style="position:absolute; inset:0; background:linear-gradient(transparent 60%, rgba(0,0,0,0.8)); display:flex; align-items:end; padding:16px;">
+          <span style="color:#FFD700; font-weight:600; font-size:14px;">Festa Glamour</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parceiros e Marcas -->
+  <section class="reveal" data-reveal style="padding:70px 25px; background:linear-gradient(135deg, #000000 0%, #1a1300 25%, #000000 75%, #0f0f0f 100%), radial-gradient(circle at 70% 50%, rgba(255,215,0,0.06), transparent 70%); text-align:center; position:relative; overflow:hidden;">
+    <!-- Efeito luxury brands -->
+    <div style="position:absolute; inset:0; opacity:0.08; pointer-events:none;">
+      <div style="position:absolute; top:20%; left:20%; width:80px; height:80px; background:radial-gradient(circle, rgba(255,215,0,0.5), transparent); border-radius:50%; animation:drift 15s infinite;"></div>
+      <div style="position:absolute; bottom:30%; right:25%; width:120px; height:120px; background:radial-gradient(circle, rgba(218,165,32,0.4), transparent); border-radius:50%; animation:drift 18s infinite reverse;"></div>
+    </div>
+    <h2 style="font-size:40px; margin:0 0 14px; font-weight:800; color:#FFD700;">Marcas Parceiras</h2>
+    <p style="color:#f5f5f5; max-width:600px; margin:0 auto 45px; font-size:15px; line-height:1.6;">Utilizamos apenas produtos de alta qualidade das melhores marcas do mercado.</p>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:40px; max-width:1000px; margin:0 auto; opacity:0.8; filter:grayscale(100%);">
+      <div style="background:white; padding:16px 24px; border-radius:12px; min-width:120px; display:flex; align-items:center; justify-content:center;">
+        <strong style="color:#000; font-size:16px;">L'Oréal</strong>
+      </div>
+      <div style="background:white; padding:16px 24px; border-radius:12px; min-width:120px; display:flex; align-items:center; justify-content:center;">
+        <strong style="color:#000; font-size:16px;">MAC</strong>
+      </div>
+      <div style="background:white; padding:16px 24px; border-radius:12px; min-width:120px; display:flex; align-items:center; justify-content:center;">
+        <strong style="color:#000; font-size:16px;">Vult</strong>
+      </div>
+      <div style="background:white; padding:16px 24px; border-radius:12px; min-width:120px; display:flex; align-items:center; justify-content:center;">
+        <strong style="color:#000; font-size:16px;">Ruby Rose</strong>
+      </div>
+      <div style="background:white; padding:16px 24px; border-radius:12px; min-width:120px; display:flex; align-items:center; justify-content:center;">
+        <strong style="color:#000; font-size:16px;">Eudora</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog/Dicas de Beleza -->
+  <section class="reveal" data-reveal style="padding:80px 25px; background:linear-gradient(135deg, #0f0f0f 0%, #1a1300 20%, #332600 40%, #1a1300 60%, #000000 80%), radial-gradient(circle at 40% 20%, rgba(255,215,0,0.07), transparent 70%); text-align:center; position:relative; overflow:hidden;">
+    <!-- Padrão de blog dourado -->
+    <div style="position:absolute; inset:0; opacity:0.1; pointer-events:none;">
+      <div style="position:absolute; top:25%; right:10%; width:110px; height:110px; background:radial-gradient(circle, rgba(255,215,0,0.35), transparent); border-radius:50%; animation:drift 26s infinite;"></div>
+      <div style="position:absolute; bottom:35%; left:8%; width:90px; height:90px; background:radial-gradient(circle, rgba(218,165,32,0.4), transparent); border-radius:50%; animation:drift 22s infinite reverse;"></div>
+      <div style="position:absolute; top:60%; left:60%; width:70px; height:70px; background:radial-gradient(circle, rgba(255,165,0,0.5), transparent); border-radius:50%; animation:drift 19s infinite;"></div>
+    </div>
+    <h2 style="font-size:44px; margin:0 0 16px; font-weight:800; color:#FFD700;">Dicas de Beleza</h2>
+    <p style="color:#f5f5f5; max-width:700px; margin:0 auto 50px; font-size:15px; line-height:1.6;">Confira nossas dicas exclusivas para manter sua beleza em dia.</p>
+    <div style="display:grid; gap:28px; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); max-width:1100px; margin:0 auto;">
+      <article style="background:linear-gradient(145deg,#1a1a1a,#000); border:1px solid rgba(255,215,0,0.2); border-radius:20px; overflow:hidden; text-align:left;">
+        <div style="height:180px; background:url('https://images.pexels.com/photos/3992656/pexels-photo-3992656.jpeg?auto=compress&cs=tinysrgb&w=600') center/cover;"></div>
+        <div style="padding:24px;">
+          <h3 style="color:#FFD700; font-size:18px; margin:0 0 12px; font-weight:700;">Como Preparar a Pele</h3>
+          <p style="color:#f5f5f5; font-size:14px; line-height:1.5; margin:0 0 16px;">Saiba como preparar sua pele antes da maquiagem para um resultado impecável que dura o dia todo.</p>
+          <div class="blog-content" style="display:none; color:#f5f5f5; font-size:13px; line-height:1.6; margin:0 0 16px;">
+            <h4 style="color:#FFD700; font-size:15px; margin:16px 0 8px;">Passo a passo:</h4>
+            <p><strong>1. Limpeza:</strong> Use um sabonete facial adequado ao seu tipo de pele. Remova toda maquiagem e impurezas.</p>
+            <p><strong>2. Esfoliação:</strong> 1-2 vezes por semana, use um esfoliante suave para remover células mortas.</p>
+            <p><strong>3. Hidratação:</strong> Aplique um hidratante facial e aguarde 10-15 minutos antes da maquiagem.</p>
+            <p><strong>4. Primer:</strong> Use um primer adequado ao seu tipo de pele para maior durabilidade.</p>
+          </div>
+          <button class="blog-toggle" style="color:#FFD700; font-size:13px; font-weight:600; background:none; border:none; cursor:pointer;">Ler mais →</button>
+        </div>
+      </article>
+      <article style="background:linear-gradient(145deg,#1a1a1a,#000); border:1px solid rgba(255,215,0,0.2); border-radius:20px; overflow:hidden; text-align:left;">
+        <div style="height:180px; background:url('https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600') center/cover;"></div>
+        <div style="padding:24px;">
+          <h3 style="color:#FFD700; font-size:18px; margin:0 0 12px; font-weight:700;">Sobrancelhas Perfeitas</h3>
+          <p style="color:#f5f5f5; font-size:14px; line-height:1.5; margin:0 0 16px;">Descubra o formato ideal de sobrancelha para seu rosto e como mantê-las sempre arrumadas.</p>
+          <div class="blog-content" style="display:none; color:#f5f5f5; font-size:13px; line-height:1.6; margin:0 0 16px;">
+            <h4 style="color:#FFD700; font-size:15px; margin:16px 0 8px;">Dicas importantes:</h4>
+            <p><strong>Formato do rosto:</strong> Rosto redondo prefere sobrancelhas mais arqueadas. Rosto alongado combina com sobrancelhas mais retas.</p>
+            <p><strong>Manutenção:</strong> Faça o design a cada 15-20 dias. Entre as sessões, retire apenas os pelos que crescem fora do desenho.</p>
+            <p><strong>Produtos:</strong> Use um lápis ou sombra 1 tom mais claro que sua sobrancelha natural para um look mais suave.</p>
+            <p><strong>Finalização:</strong> Use um gel fixador transparente para manter os fios no lugar.</p>
+          </div>
+          <button class="blog-toggle" style="color:#FFD700; font-size:13px; font-weight:600; background:none; border:none; cursor:pointer;">Ler mais →</button>
+        </div>
+      </article>
+      <article style="background:linear-gradient(145deg,#1a1a1a,#000); border:1px solid rgba(255,215,0,0.2); border-radius:20px; overflow:hidden; text-align:left;">
+        <div style="height:180px; background:url('https://images.pexels.com/photos/3993477/pexels-photo-3993477.jpeg?auto=compress&cs=tinysrgb&w=600') center/cover;"></div>
+        <div style="padding:24px;">
+          <h3 style="color:#FFD700; font-size:18px; margin:0 0 12px; font-weight:700;">Cuidados Pós-Procedimento</h3>
+          <p style="color:#f5f5f5; font-size:14px; line-height:1.5; margin:0 0 16px;">Orientações importantes para manter os resultados da micropigmentação e extensão de cílios.</p>
+          <div class="blog-content" style="display:none; color:#f5f5f5; font-size:13px; line-height:1.6; margin:0 0 16px;">
+            <h4 style="color:#FFD700; font-size:15px; margin:16px 0 8px;">Micropigmentação:</h4>
+            <p><strong>Primeiros 7 dias:</strong> Não molhe, não esfregue, use apenas os produtos recomendados.</p>
+            <p><strong>Evite:</strong> Sol direto, piscina, sauna, exercícios intensos por 10 dias.</p>
+            <h4 style="color:#FFD700; font-size:15px; margin:16px 0 8px;">Extensão de Cílios:</h4>
+            <p><strong>Primeiras 24h:</strong> Mantenha os cílios secos. Evite vapor e calor.</p>
+            <p><strong>Limpeza:</strong> Use produtos oil-free. Escove suavemente com a escovinha fornecida.</p>
+            <p><strong>Manutenção:</strong> Retoque a cada 15-20 dias para manter o volume.</p>
+          </div>
+          <button class="blog-toggle" style="color:#FFD700; font-size:13px; font-weight:600; background:none; border:none; cursor:pointer;">Ler mais →</button>
+        </div>
+      </article>
+      
+      <!-- Artigos extras ocultos -->
+      <article class="extra-blog" style="display:none; background:linear-gradient(145deg,#1a1a1a,#000); border:1px solid rgba(255,215,0,0.2); border-radius:20px; overflow:hidden; text-align:left;">
+        <div style="height:180px; background:url('https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=600') center/cover;"></div>
+        <div style="padding:24px;">
+          <h3 style="color:#FFD700; font-size:18px; margin:0 0 12px; font-weight:700;">Maquiagem para Noivas</h3>
+          <p style="color:#f5f5f5; font-size:14px; line-height:1.5; margin:0 0 16px;">Dicas especiais para o grande dia ficar perfeito em todas as fotos.</p>
+          <div class="blog-content" style="display:none; color:#f5f5f5; font-size:13px; line-height:1.6; margin:0 0 16px;">
+            <p><strong>Teste antecipado:</strong> Faça o teste 30-60 dias antes. Tire fotos com flash para ver o resultado.</p>
+            <p><strong>Base resistente:</strong> Use produtos à prova d'água e com boa fixação para durar todo o evento.</p>
+            <p><strong>Harmonia:</strong> A maquiagem deve combinar com o vestido, local e horário da cerimônia.</p>
+          </div>
+          <button class="blog-toggle" style="color:#FFD700; font-size:13px; font-weight:600; background:none; border:none; cursor:pointer;">Ler mais →</button>
+        </div>
+      </article>
+      
+      <article class="extra-blog" style="display:none; background:linear-gradient(145deg,#1a1a1a,#000); border:1px solid rgba(255,215,0,0.2); border-radius:20px; overflow:hidden; text-align:left;">
+        <div style="height:180px; background:url('https://images.pexels.com/photos/3735632/pexels-photo-3735632.jpeg?auto=compress&cs=tinysrgb&w=600') center/cover;"></div>
+        <div style="padding:24px;">
+          <h3 style="color:#FFD700; font-size:18px; margin:0 0 12px; font-weight:700;">Tendências 2025</h3>
+          <p style="color:#f5f5f5; font-size:14px; line-height:1.5; margin:0 0 16px;">As principais tendências de maquiagem e beleza para este ano.</p>
+          <div class="blog-content" style="display:none; color:#f5f5f5; font-size:13px; line-height:1.6; margin:0 0 16px;">
+            <p><strong>Pele natural:</strong> Bases leves com acabamento natural estão em alta.</p>
+            <p><strong>Sobrancelhas full:</strong> Sobrancelhas naturais e volumosas dominam as passarelas.</p>
+            <p><strong>Cores vibrantes:</strong> Sombras coloridas nos olhos voltaram com força total.</p>
+          </div>
+          <button class="blog-toggle" style="color:#FFD700; font-size:13px; font-weight:600; background:none; border:none; cursor:pointer;">Ler mais →</button>
+        </div>
+      </article>
+    </div>
+    
+    <button id="more-blog-btn" style="margin:54px auto 12px; display:inline-block; background:linear-gradient(90deg,#A67C00,#FFD700,#B8860B); color:#000; font-weight:700; border:none; padding:15px 44px; font-size:15px; border-radius:40px; cursor:pointer; position:relative; overflow:hidden; letter-spacing:1px; box-shadow:0 0 0 1px rgba(255,215,0,0.4), 0 10px 34px -10px rgba(255,215,0,0.55); transition:transform .45s cubic-bezier(.19,1,.22,1), box-shadow .45s;">Ver mais dicas</button>
+  </section>
+
+  <section class="bg-gradient-anim reveal" data-reveal style="padding:110px 25px; text-align:center; color:#FFD700; background:linear-gradient(-45deg, #000000 0%, #1a1300 20%, #332600 40%, #1a1300 60%, #000000 80%), radial-gradient(circle at 50% 50%, rgba(255,215,0,0.1), transparent 70%); position:relative; overflow:hidden;">
+    <!-- Efeito CTA premium -->
+    <div style="position:absolute; inset:0; opacity:0.15; pointer-events:none;">
+      <div style="position:absolute; top:20%; left:20%; width:150px; height:150px; background:radial-gradient(circle, rgba(255,215,0,0.4), transparent); border-radius:50%; animation:glowLoop 8s infinite;"></div>
+      <div style="position:absolute; bottom:25%; right:15%; width:120px; height:120px; background:radial-gradient(circle, rgba(218,165,32,0.35), transparent); border-radius:50%; animation:glowLoop 10s infinite reverse;"></div>
+    </div>
+    <h2 class="anim-bounce" style="font-size:50px; margin:0 0 20px; font-weight:900; text-shadow:0 6px 20px rgba(0,0,0,0.8); color:#FFD700;">Pronta Para Brilhar?</h2>
+    <p class="anim-rise-del1" style="margin:0 0 36px; font-size:18px; line-height:1.5; max-width:760px; display:inline-block; color:#f5f5f5;">Garanta seu horário e viva a experiência de um atendimento feito sob medida.</p>
+    <a href="https://wa.me/5500000000000?text=Quero%20agendar" class="pulse-btn hover-zoom" style="background:#FFD700; color:#000000; padding:18px 46px; font-weight:800; font-size:18px; border-radius:55px; text-decoration:none; box-shadow:0 10px 28px -6px rgba(255,215,0,0.6); letter-spacing:1px;">Agendar Agora</a>
+  </section>
+
+  <!-- Contato - Preto & Dourado -->
+  <section id="contato" class="reveal" data-reveal style="padding:90px 25px; background:linear-gradient(135deg, #1a1a1a 0%, #1a1300 30%, #000000 70%, #0f0f0f 100%), radial-gradient(circle at 80% 30%, rgba(255,215,0,0.06), transparent 70%); text-align:center; position:relative; overflow:hidden;">
+    <!-- Elementos de contato dourados -->
+    <div style="position:absolute; inset:0; opacity:0.08; pointer-events:none;">
+      <div style="position:absolute; top:30%; left:10%; width:100px; height:100px; background:radial-gradient(circle, rgba(255,215,0,0.4), transparent); border-radius:50%; animation:drift 24s infinite;"></div>
+      <div style="position:absolute; bottom:20%; right:12%; width:140px; height:140px; background:radial-gradient(circle, rgba(218,165,32,0.3), transparent); border-radius:50%; animation:drift 28s infinite reverse;"></div>
+    </div>
+    <h2 style="font-size:46px; margin:0 0 18px; font-weight:800; color:#FFD700;">Contato & Localização</h2>
+    <p style="margin:0 0 45px; font-size:16px; line-height:1.5; max-width:780px; display:inline-block; color:#f5f5f5;">Atendimento sob agendamento. Tire dúvidas e garante seu horário.</p>
+    
+    <!-- Mapa do Google -->
+    <div style="max-width:1100px; margin:0 auto 45px; border-radius:20px; overflow:hidden; box-shadow:0 15px 40px rgba(255,215,0,0.3); position:relative;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.627176636476!2d-51.21447712444604!3d-30.047552074922034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519785b1ea98989%3A0x3225d21b9f807ca4!2sHospital%20Ernesto%20Dornelles!5e0!3m2!1spt-BR!2sbr!4v1755769795902!5m2!1spt-BR!2sbr" width="100%" height="350" style="border:0; filter:grayscale(0.3) contrast(1.2);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div style="position:absolute; bottom:15px; right:15px; background:linear-gradient(135deg,#FFD700,#FFA500); color:#000; padding:8px 16px; border-radius:20px; font-size:12px; font-weight:700; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+        📍 Nossa Localização
+      </div>
+    </div>
+    
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:40px; max-width:1100px; margin:0 auto;">
+      <div style="flex:1; min-width:300px; background:linear-gradient(140deg,#FFD700,#FFA500,#DAA520); color:#000000; border-radius:26px; padding:38px 34px; box-shadow:0 18px 42px -12px rgba(255,215,0,0.5); text-align:left;">
+        <h3 style="margin:0 0 18px; font-size:24px; font-weight:800;">Fale Conosco</h3>
+        <p style="margin:0 0 10px; font-size:14px; line-height:1.5;">📱 WhatsApp: <strong style="color:#000000;">(11) 99999-9999</strong></p>
+        <p style="margin:0 0 10px; font-size:14px; line-height:1.5;">📧 E-mail: <strong style="color:#000000;">contato@imperiomdbeauty.com</strong></p>
+        <p style="margin:0 0 10px; font-size:14px; line-height:1.5;">📍 Endereço: <strong style="color:#000000;">Rua Exemplo, 123 - Centro</strong></p>
+        <p style="margin:0 0 22px; font-size:13px; line-height:1.5; opacity:0.8;">São Paulo - SP, CEP: 01000-000</p>
+        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." style="display:inline-block; background:#000000; color:#FFD700; padding:12px 26px; font-weight:700; border-radius:40px; text-decoration:none; box-shadow:0 8px 24px rgba(0,0,0,0.6); transition:all 0.3s;">💬 Chamar no WhatsApp</a>
+      </div>
+      <div style="flex:1; min-width:300px; background:linear-gradient(145deg,#2a2a2a,#1a1a1a); border:2px dashed #FFD700; color:#FFD700; border-radius:26px; padding:38px 34px; text-align:left;">
+        <h3 style="margin:0 0 16px; font-size:20px; color:#FFD700;">🕒 Horários de Funcionamento</h3>
+        <div style="display:grid; gap:8px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid rgba(255,215,0,0.2);">
+            <span style="font-size:14px; color:#f5f5f5;">Segunda a Sexta</span>
+            <span style="font-size:14px; color:#FFD700; font-weight:600;">09h - 19h</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid rgba(255,215,0,0.2);">
+            <span style="font-size:14px; color:#f5f5f5;">Sábado</span>
+            <span style="font-size:14px; color:#FFD700; font-weight:600;">09h - 16h</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:8px 0;">
+            <span style="font-size:14px; color:#f5f5f5;">Domingo</span>
+            <span style="font-size:13px; color:#f5f5f5; opacity:0.8;">Sob consulta</span>
+          </div>
+        </div>
+        <p style="margin:16px 0 0; font-size:12px; line-height:1.4; opacity:0.8; color:#f5f5f5;">💡 Atendemos feriados mediante agendamento prévio.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER COMPACTO - Solicitar Horário, Lista VIP, FAQ -->
+  <footer class="reveal" data-reveal style="padding:80px 25px 60px; background:linear-gradient(135deg, #0f0f0f 0%, #1a1300 30%, #000000 70%, #0f0f0f 100%), radial-gradient(circle at 50% 0%, rgba(255,215,0,0.08), transparent 80%); position:relative; overflow:hidden;">
+    <!-- Padrão decorativo dourado -->
+    <div style="position:absolute; inset:0; opacity:0.06; pointer-events:none;">
+      <div style="position:absolute; top:10%; left:5%; width:100px; height:100px; background:radial-gradient(circle, rgba(255,215,0,0.4), transparent); border-radius:50%; animation:drift 20s infinite;"></div>
+      <div style="position:absolute; bottom:20%; right:8%; width:140px; height:140px; background:radial-gradient(circle, rgba(218,165,32,0.3), transparent); border-radius:50%; animation:drift 25s infinite reverse;"></div>
+      <div style="position:absolute; top:50%; left:50%; width:80px; height:80px; background:radial-gradient(circle, rgba(255,165,0,0.5), transparent); border-radius:50%; animation:drift 18s infinite;"></div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(350px,1fr)); gap:50px; max-width:1200px; margin:0 auto; align-items:start;">
+      
+      <!-- Solicitar Horário -->
+      <div style="text-align:center;">
+        <h3 style="font-size:32px; margin:0 0 16px; font-weight:800; color:#FFD700;">📅 Solicitar Horário</h3>
+        <p style="margin:0 0 30px; font-size:14px; line-height:1.5; color:#f5f5f5;">Preencha e envie sua solicitação</p>
+        <form action="mailto:contato@imperiomdbeauty.com?subject=Agendamento" method="post" enctype="text/plain" style="display:flex; flex-direction:column; gap:16px; max-width:320px; margin:0 auto;">
+          <input name="Nome" required placeholder="Seu nome" style="padding:12px 16px; border-radius:12px; border:1px solid rgba(255,215,0,0.35); background:#0f0f0f; color:#f5f5f5; font-size:13px;" />
+          <input name="WhatsApp" required placeholder="(00) 90000-0000" style="padding:12px 16px; border-radius:12px; border:1px solid rgba(255,215,0,0.35); background:#0f0f0f; color:#f5f5f5; font-size:13px;" />
+          <textarea name="Objetivo" rows="3" placeholder="Ex: maquiagem para casamento dia 24/09" style="padding:12px 16px; border-radius:12px; border:1px solid rgba(255,215,0,0.35); background:#0f0f0f; color:#f5f5f5; font-size:13px; resize:vertical;"></textarea>
+          <button type="submit" style="cursor:pointer; background:linear-gradient(135deg,#FFD700,#FFA500); color:#000000; padding:14px 30px; font-weight:700; font-size:14px; border:none; border-radius:40px; letter-spacing:1px; box-shadow:0 8px 24px -8px rgba(255,215,0,0.55); transition:transform 0.3s;">📧 Enviar Solicitação</button>
+        </form>
+      </div>
+
+      <!-- Lista VIP -->
+      <div style="text-align:center;">
+        <h3 style="font-size:32px; margin:0 0 16px; font-weight:800; color:#FFD700;">⭐ Lista VIP</h3>
+        <p style="margin:0 0 30px; font-size:14px; line-height:1.5; color:#f5f5f5;">Acesso antecipado e condições especiais</p>
+        <form action="mailto:contato@imperiomdbeauty.com?subject=Lista%20VIP" method="post" enctype="text/plain" style="display:flex; flex-direction:column; gap:16px; max-width:320px; margin:0 auto;">
+          <input name="Nome" required placeholder="Seu nome" style="padding:12px 16px; border-radius:12px; border:1px solid rgba(255,215,0,0.4); background:#0f0f0f; color:#f5f5f5; font-size:13px;" />
+          <input name="WhatsApp" required placeholder="WhatsApp" style="padding:12px 16px; border-radius:12px; border:1px solid rgba(255,215,0,0.4); background:#0f0f0f; color:#f5f5f5; font-size:13px;" />
+          <button type="submit" style="background:linear-gradient(135deg,#FFD700,#FFA500); color:#000000; padding:14px 30px; border:none; border-radius:40px; font-weight:700; font-size:14px; cursor:pointer; letter-spacing:1px; box-shadow:0 8px 24px -8px rgba(255,215,0,0.55); transition:transform 0.3s;">🌟 Quero Receber</button>
+        </form>
+      </div>
+
+      <!-- FAQ -->
+      <div style="text-align:left;">
+        <h3 style="font-size:32px; margin:0 0 16px; font-weight:800; color:#FFD700; text-align:center;">❓ FAQ</h3>
+        <p style="margin:0 0 25px; font-size:14px; line-height:1.5; color:#f5f5f5; text-align:center;">Dúvidas frequentes</p>
+        <div style="display:flex; flex-direction:column; gap:12px; max-width:350px; margin:0 auto;">
+          <details style="background:linear-gradient(145deg,#1a1a1a,#000000); border:1px solid rgba(255,215,0,0.25); border-radius:12px; padding:14px 18px;">
+            <summary style="cursor:pointer; list-style:none; font-weight:600; color:#FFD700; font-size:13px;">Quanto tempo antes agendar?</summary>
+            <p style="margin:10px 0 0; font-size:12px; line-height:1.5; color:#f5f5f5;">Para eventos especiais, reserve com 30-45 dias de antecedência.</p>
+          </details>
+          <details style="background:linear-gradient(145deg,#1a1a1a,#000000); border:1px solid rgba(255,215,0,0.25); border-radius:12px; padding:14px 18px;">
+            <summary style="cursor:pointer; font-weight:600; color:#FFD700; font-size:13px;">Duração da maquiagem?</summary>
+            <p style="margin:10px 0 0; font-size:12px; line-height:1.5; color:#f5f5f5;">8 a 12 horas com os cuidados adequados.</p>
+          </details>
+          <details style="background:linear-gradient(145deg,#1a1a1a,#000000); border:1px solid rgba(255,215,0,0.25); border-radius:12px; padding:14px 18px;">
+            <summary style="cursor:pointer; font-weight:600; color:#FFD700; font-size:13px;">Atende em domicílio?</summary>
+            <p style="margin:10px 0 0; font-size:12px; line-height:1.5; color:#f5f5f5;">Sim, com taxa de deslocamento.</p>
+          </details>
+          <details style="background:linear-gradient(145deg,#1a1a1a,#000000); border:1px solid rgba(255,215,0,0.25); border-radius:12px; padding:14px 18px;">
+            <summary style="cursor:pointer; font-weight:600; color:#FFD700; font-size:13px;">Quais marcas usa?</summary>
+            <p style="margin:10px 0 0; font-size:12px; line-height:1.5; color:#f5f5f5;">Apenas produtos profissionais de alta qualidade.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Copyright - Preto & Dourado -->
+  <div style="text-align:center; padding:25px 10px; font-size:11px; color:#FFD700; opacity:0.8; background:#000000;">&copy; 2025 Império MD Beauty Lounge.</div>
+  
+  <!-- Barra Social Flutuante Premium com Animações -->
+  <div style="position:fixed; right:20px; bottom:20px; z-index:999; display:flex; flex-direction:column; gap:15px;">
+    
+    <!-- WhatsApp Premium -->
+    <div style="position:relative;" class="social-icon-container">
+      <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio%20no%20Imp%C3%A9rio%20MD%20Beauty%20Lounge" target="_blank" class="whatsapp-btn" style="width:65px; height:65px; border-radius:50%; background:linear-gradient(135deg,#25d366,#128c7e,#075e54); display:flex; align-items:center; justify-content:center; box-shadow:0 10px 30px -5px rgba(37,211,102,0.7), 0 0 0 0 rgba(37,211,102,0.4); text-decoration:none; border:3px solid rgba(255,215,0,0.6); position:relative; overflow:hidden; transition:all 0.4s cubic-bezier(0.4,0,0.2,1); transform:scale(1);">
+        
+        <!-- Efeito brilho de fundo -->
+        <div style="position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent); transform:rotate(45deg) translateX(-100%); animation:shimmer 3s infinite;"></div>
+        
+        <!-- Ícone WhatsApp SVG -->
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="white" style="position:relative; z-index:2;">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.051 3.488"/>
+        </svg>
+        
+        <!-- Indicador único - Online com contador -->
+        <div style="position:absolute; top:-8px; right:-8px; background:linear-gradient(135deg,#ff4757,#ff3742); color:white; border-radius:50%; width:26px; height:26px; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; border:3px solid white; box-shadow:0 4px 12px rgba(255,71,87,0.5); z-index:3;">
+          <span style="position:relative; z-index:2;">3</span>
+          <!-- Pulso de notificação -->
+          <div style="position:absolute; top:0; left:0; right:0; bottom:0; border-radius:50%; background:#ff4757; animation:pulse 2s infinite; opacity:0.6;"></div>
+        </div>
+      </a>
+      
+      <!-- Tooltip WhatsApp -->
+      <div class="social-tooltip" style="position:absolute; right:75px; top:50%; transform:translateY(-50%); background:linear-gradient(135deg,#000000,#1a1300); color:#FFD700; padding:12px 16px; border-radius:12px; font-size:13px; white-space:nowrap; opacity:0; pointer-events:none; transition:all 0.3s cubic-bezier(0.4,0,0.2,1); font-weight:600; border:1px solid rgba(255,215,0,0.3); box-shadow:0 8px 25px rgba(0,0,0,0.4);">
+        💬 Converse conosco agora!
+        <div style="position:absolute; right:-6px; top:50%; transform:translateY(-50%); width:0; height:0; border-left:6px solid #1a1300; border-top:6px solid transparent; border-bottom:6px solid transparent;"></div>
+      </div>
+    </div>
+    
+    <!-- Instagram Premium -->
+    <div style="position:relative;" class="social-icon-container">
+      <a href="https://instagram.com/imperiomdbeauty" target="_blank" class="instagram-btn" style="width:58px; height:58px; border-radius:50%; background:linear-gradient(135deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5); display:flex; align-items:center; justify-content:center; box-shadow:0 8px 25px -5px rgba(214,41,118,0.6); text-decoration:none; border:2px solid rgba(255,215,0,0.4); position:relative; overflow:hidden; transition:all 0.4s cubic-bezier(0.4,0,0.2,1); transform:scale(1);">
+        
+        <!-- Efeito shimmer -->
+        <div style="position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent); transform:rotate(45deg) translateX(-100%); animation:shimmer 4s infinite 1s;"></div>
+        
+        <!-- Ícone Instagram SVG -->
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white" style="position:relative; z-index:2;">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+      </a>
+      
+      <!-- Tooltip Instagram -->
+      <div class="social-tooltip" style="position:absolute; right:68px; top:50%; transform:translateY(-50%); background:linear-gradient(135deg,#000000,#1a1300); color:#FFD700; padding:12px 16px; border-radius:12px; font-size:13px; white-space:nowrap; opacity:0; pointer-events:none; transition:all 0.3s cubic-bezier(0.4,0,0.2,1); font-weight:600; border:1px solid rgba(255,215,0,0.3); box-shadow:0 8px 25px rgba(0,0,0,0.4);">
+        📸 Veja nossos trabalhos!
+        <div style="position:absolute; right:-6px; top:50%; transform:translateY(-50%); width:0; height:0; border-left:6px solid #1a1300; border-top:6px solid transparent; border-bottom:6px solid transparent;"></div>
+      </div>
+    </div>
+    
+    <!-- Facebook Premium -->
+    <div style="position:relative;" class="social-icon-container">
+      <a href="https://facebook.com/imperiomdbeauty" target="_blank" class="facebook-btn" style="width:58px; height:58px; border-radius:50%; background:linear-gradient(135deg,#1877f2,#166fe5,#0d5ed1); display:flex; align-items:center; justify-content:center; box-shadow:0 8px 25px -5px rgba(24,119,242,0.6); text-decoration:none; border:2px solid rgba(255,215,0,0.4); position:relative; overflow:hidden; transition:all 0.4s cubic-bezier(0.4,0,0.2,1); transform:scale(1);">
+        
+        <!-- Efeito shimmer -->
+        <div style="position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent); transform:rotate(45deg) translateX(-100%); animation:shimmer 4s infinite 2s;"></div>
+        
+        <!-- Ícone Facebook SVG -->
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white" style="position:relative; z-index:2;">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+      </a>
+      
+      <!-- Tooltip Facebook -->
+      <div class="social-tooltip" style="position:absolute; right:68px; top:50%; transform:translateY(-50%); background:linear-gradient(135deg,#000000,#1a1300); color:#FFD700; padding:12px 16px; border-radius:12px; font-size:13px; white-space:nowrap; opacity:0; pointer-events:none; transition:all 0.3s cubic-bezier(0.4,0,0.2,1); font-weight:600; border:1px solid rgba(255,215,0,0.3); box-shadow:0 8px 25px rgba(0,0,0,0.4);">
+        👥 Curta nossa página!
+        <div style="position:absolute; right:-6px; top:50%; transform:translateY(-50%); width:0; height:0; border-left:6px solid #1a1300; border-top:6px solid transparent; border-bottom:6px solid transparent;"></div>
+      </div>
+    </div>
+  </div>
+    </a>
+  </div>
+  <!-- JS Interno para revelações e melhorias de animação -->
+  <script>
+  (function(){
+    const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!prefersReduce && 'IntersectionObserver' in window){
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+      },{threshold:0.22});
+      document.querySelectorAll('[data-reveal]').forEach(el=> io.observe(el));
+    } else { // fallback
+      document.querySelectorAll('[data-reveal]').forEach(el=> el.classList.add('in'));
+    }
+    // Proteção: garante visibilidade dos produtos caso alguma animação CSS falhe
+    setTimeout(()=>{document.querySelectorAll('#produtos [data-reveal]').forEach(el=>{el.style.opacity = '1'; el.style.transform='none';});}, 1200);
+    // Fallback Instagram: se após 6s embeds não expandirem, mostra grid simples
+    setTimeout(()=>{
+      const igBlocks = document.querySelectorAll('#instagram-embeds blockquote.instagram-media');
+      let loaded = false;
+      igBlocks.forEach(b=>{ if(b.querySelector('iframe')) loaded = true; });
+      if(!loaded){
+        const fb = document.getElementById('ig-fallback');
+        if(fb) fb.style.display='block';
+      }
+    },6000);
+    // Botão Ver Mais Instagram
+    const moreIgBtn = document.getElementById('more-ig-btn');
+    if(moreIgBtn){
+      moreIgBtn.addEventListener('click',()=>{
+        const extras = document.querySelectorAll('#instagram-embeds .extra-ig');
+        extras.forEach(el=>{el.style.display='block';});
+        moreIgBtn.style.display='none';
+        if(window.instgrm && window.instgrm.Embeds && window.instgrm.Embeds.process){
+          try{ window.instgrm.Embeds.process(); }catch(e){}
+        }
+      });
+    }
+    // Aplica animação extra chamativa em cards de serviços quando visíveis
+    const extraTargets = document.querySelectorAll('#servicos [class*="anim-slide"], #combos div[style*="border-radius:30px"], #depoimentos .hover-lift');
+    extraTargets.forEach((el,i)=>{
+      el.style.transition='transform .6s cubic-bezier(.19,1,.22,1), box-shadow .6s ease';
+      el.addEventListener('mouseenter',()=>{
+        el.style.transform='translateY(-10px) scale(1.03)';
+        el.style.boxShadow='0 25px 60px -15px rgba(255,215,0,0.55)';
+      });
+      el.addEventListener('mouseleave',()=>{
+        el.style.transform='';
+        el.style.boxShadow='';
+      });
+    });
+    
+    // Filtros da galeria
+    const galleryFilters = document.querySelectorAll('.gallery-filter');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    if(galleryFilters.length > 0){
+      galleryFilters.forEach(filter => {
+        filter.addEventListener('click', () => {
+          const category = filter.dataset.filter;
+          
+          // Update active filter
+          galleryFilters.forEach(f => {
+            f.style.background = 'rgba(255,215,0,0.1)';
+            f.style.color = '#FFD700';
+          });
+          filter.style.background = 'linear-gradient(135deg,#FFD700,#FFA500)';
+          filter.style.color = '#000';
+          
+          // Filter items
+          galleryItems.forEach(item => {
+            if (category === 'all' || item.dataset.category === category) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    }
+    
+    // WhatsApp tooltip
+    const whatsappBtn = document.querySelector('a[href*="wa.me"]');
+    const tooltip = whatsappBtn?.nextElementSibling;
+    if(whatsappBtn && tooltip){
+      whatsappBtn.addEventListener('mouseenter', () => {
+        tooltip.style.opacity = '1';
+      });
+      whatsappBtn.addEventListener('mouseleave', () => {
+        tooltip.style.opacity = '0';
+      });
+    }
+    
+    // Funcionalidade para expandir artigos individuais do blog
+    const blogToggles = document.querySelectorAll('.blog-toggle');
+    blogToggles.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const content = this.previousElementSibling;
+        if (content.style.display === 'none' || !content.style.display) {
+          content.style.display = 'block';
+          this.textContent = 'Ler menos ↑';
+        } else {
+          content.style.display = 'none';
+          this.textContent = 'Ler mais →';
+        }
+      });
+    });
+
+    // Funcionalidade para mostrar mais artigos do blog
+    const moreBlogBtn = document.getElementById('more-blog-btn');
+    const extraBlogs = document.querySelectorAll('.extra-blog');
+    if (moreBlogBtn && extraBlogs.length > 0) {
+      moreBlogBtn.addEventListener('click', function() {
+        const isHidden = extraBlogs[0].style.display === 'none' || !extraBlogs[0].style.display;
+        extraBlogs.forEach(blog => {
+          blog.style.display = isHidden ? 'block' : 'none';
+        });
+        this.textContent = isHidden ? 'Ver menos dicas' : 'Ver mais dicas';
+      });
+    }
+  })();
+  </script>
+  <script async src="//www.instagram.com/embed.js"></script>
+
+  <!-- CHATBOT ASSISTENTE VIRTUAL -->
+  <div class="chatbot-container">
+    <div class="chat-window" id="chatWindow">
+      <div class="chat-header">
+        <img src="cropped-abertura-2.jpg" alt="Assistente">
+        <div>
+          <div style="font-size:14px;">Sofia - Assistente Virtual</div>
+          <div style="font-size:11px; opacity:0.8;">Império MD Beauty Lounge</div>
+        </div>
+        <button onclick="toggleChat()" style="margin-left:auto; background:none; border:none; color:#000; font-size:18px; cursor:pointer;">✕</button>
+      </div>
+      
+      <div class="chat-messages" id="chatMessages">
+        <div class="message bot">
+          Olá! 👋 Sou a Sofia, sua assistente virtual do Império MD Beauty Lounge! 
+          <br><br>Como posso te ajudar hoje?
+        </div>
+      </div>
+      
+      <div class="chat-input">
+        <div class="chat-suggestions" id="chatSuggestions">
+          <button class="suggestion-btn" onclick="sendSuggestion('Quais são os preços?')">💰 Preços</button>
+          <button class="suggestion-btn" onclick="sendSuggestion('Quais serviços vocês oferecem?')">✨ Serviços</button>
+          <button class="suggestion-btn" onclick="sendSuggestion('Como agendar?')">📅 Agendar</button>
+          <button class="suggestion-btn" onclick="sendSuggestion('Horários de funcionamento')">🕒 Horários</button>
+        </div>
+        <div class="input-area">
+          <input type="text" id="chatInput" placeholder="Digite sua pergunta..." onkeypress="handleKeyPress(event)">
+          <button class="send-btn" onclick="sendMessage()">➤</button>
+        </div>
+      </div>
+    </div>
+    
+    <button class="chat-toggle" id="chatToggle" onclick="toggleChat()">
+      💬
+      <div class="notification-dot" id="chatNotification">1</div>
+    </button>
+  </div>
+
+  <script>
+    // === CHATBOT FUNCTIONALITY ENHANCED ===
+    const chatWindow = document.getElementById('chatWindow');
+    const chatMessages = document.getElementById('chatMessages');
+    const chatInput = document.getElementById('chatInput');
+    const chatNotification = document.getElementById('chatNotification');
+    let isOpen = false;
+    let conversationContext = [];
+    let userName = '';
+
+    // Banco de dados expandido de respostas com IA melhorada
+    const responses = {
+      'saudacao': {
+        keywords: ['oi', 'olá', 'ola', 'hello', 'ei', 'boa tarde', 'bom dia', 'boa noite', 'ola', 'oie', 'eae', 'e ai', 'tudo bem', 'tudo bom', 'oi boa tarde', 'oi bom dia', 'oi boa noite', 'salve', 'fala'],
+        answer: `Olá! 😊 Que bom te ver aqui!\n\nSou a Sofia, sua consultora de beleza pessoal do **Império MD Beauty Lounge**. Estou aqui para te ajudar com tudo sobre nossos serviços!\n\n✨ **Como posso te ajudar hoje?**`,
+        actions: [
+          { text: '💰 Ver Preços', action: 'sendSuggestion', param: 'Quais são os preços?' },
+          { text: '📍 Localização', action: 'sendSuggestion', param: 'Onde vocês ficam?' },
+          { text: '📅 Agendar', action: 'sendSuggestion', param: 'Como agendar?' },
+          { text: '🎯 Quiz Personalizado', action: 'startQuiz', param: '' }
+        ]
+      },
+      'preços': {
+        keywords: ['preço', 'valor', 'quanto custa', 'tabela', 'preços', 'valores', 'orçamento', 'custa', 'custam', 'quanto', 'dinheiro', 'pagar', 'pagamento', 'investimento', 'grana', 'real', 'reais', 'custo', 'cobra', 'cobram', 'sai', 'sai por', 'vale'],
+        answer: `💰 **Tabela de Preços - Império MD Beauty Lounge:**\n\n**🎨 MAQUIAGEM:**\n• Social/Festa: R$ 80\n• Noivas: R$ 150\n• Madrinha: R$ 120\n\n**👁️ SOBRANCELHAS:**\n• Design: R$ 45\n• Micropigmentação: R$ 350\n• Henna: R$ 35\n\n**👀 CÍLIOS:**\n• Extensão Fio a Fio: R$ 120\n• Volume Brasileiro: R$ 150\n• Lifting: R$ 80\n\n**💎 COMBOS ESPECIAIS:**\n• Maquiagem + Sobrancelha: R$ 110 *(economize R$ 15)*\n• Noiva Completa: R$ 280 *(economize R$ 40)*\n\n**🎁 CUPOM ESPECIAL:** Use *SOFIA10* e ganhe 10% off na primeira visita!`,
+        actions: [
+          { text: '🧮 Calcular Orçamento', action: 'showCalculator', param: '' },
+          { text: '📱 Agendar WhatsApp', action: 'whatsappDirect', param: 'Olá! Vi os preços no site e gostaria de agendar um horário.' },
+          { text: '💾 Salvar Tabela', action: 'downloadPrices', param: '' }
+        ]
+      },
+      'serviços': {
+        keywords: ['serviços', 'serviço', 'fazem', 'oferecem', 'trabalham', 'procedimentos', 'fazem o que', 'que fazem', 'trabalho', 'especialidades', 'area', 'ramo', 'atividade', 'tipos', 'categoria', 'modalidade'],
+        answer: `✨ **Nossos Serviços Especializados:**\n\n**🎨 MAQUIAGEM PROFISSIONAL:**\n• Social e eventos\n• Noivas e madrinhas\n• Editorial e ensaios\n• Maquiagem artística\n• Automaquiagem (curso)\n\n**👁️ DESIGN DE SOBRANCELHAS:**\n• Design personalizado\n• Micropigmentação\n• Henna + tintura\n• Correção de falhas\n\n**👀 EXTENSÃO DE CÍLIOS:**\n• Fio a fio clássico\n• Volume brasileiro\n• Mega volume\n• Lifting de cílios\n\n**💇‍♀️ EXTRAS:**\n• Penteados sociais\n• Atendimento domiciliar\n• Consultoria de imagem\n\n**🏆 Utilizamos apenas produtos premium das melhores marcas!**`,
+        actions: [
+          { text: '🎯 Quiz: Qual serviço é ideal?', action: 'startQuiz', param: '' },
+          { text: '📸 Ver Portfólio', action: 'showGallery', param: '' },
+          { text: '📅 Agendar Consulta', action: 'whatsappDirect', param: 'Olá! Gostaria de agendar uma consulta para conhecer os serviços.' }
+        ]
+      },
+      'agendar': {
+        keywords: ['agendar', 'marcar', 'horário', 'agendamento', 'consulta', 'disponibilidade', 'marcar horario', 'quero agendar', 'agendar horario', 'marca', 'reservar', 'reserva', 'quero marcar', 'como marcar', 'como agendar', 'preciso agendar', 'preciso marcar', 'quero ir', 'quero fazer', 'booking', 'appointment', 'schedule', 'quando posso', 'tem horario', 'disponivel', 'livre'],
+        answer: `📅 **Como Agendar no Império MD Beauty Lounge:**\n\n**🚀 FORMAS DE CONTATO:**\n\n**1. WhatsApp Direto:** (11) 99999-9999\n*Resposta em até 30 minutos*\n\n**2. Instagram:** @imperiomdbeauty\n*Veja nossos trabalhos e agende*\n\n**3. Formulário do Site**\n*Preencha no final da página*\n\n⏰ **DICAS IMPORTANTES:**\n• Eventos especiais: agende 30-45 dias antes\n• Noivas: consulta prévia recomendada\n• Remarcações: até 24h de antecedência\n• Confirmação: 1 dia antes por WhatsApp\n\n**📍 Local:** Hospital Ernesto Dornelles - Porto Alegre/RS`,
+        actions: [
+          { text: '📱 Abrir WhatsApp', action: 'whatsappDirect', param: 'Olá! Gostaria de agendar um horário. Quando vocês têm disponibilidade?' },
+          { text: '📋 Preencher Formulário', action: 'scrollToForm', param: '' },
+          { text: '🕒 Ver Horários', action: 'sendSuggestion', param: 'Horários de funcionamento' }
+        ]
+      },
+      'horários': {
+        keywords: ['horário', 'funcionamento', 'aberto', 'fechado', 'quando', 'horarios', 'que horas', 'abre', 'fecha', 'funciona', 'atende', 'disponível', 'disponivel', 'trabalha', 'opera', 'expediente', 'plantão', 'domingo', 'sabado', 'segunda', 'semana', 'final de semana', 'feriado', 'hora', 'tempo', 'periodo'],
+        answer: `🕒 **Horários de Funcionamento:**\n\n**📅 SEGUNDA A SEXTA:**\n09h às 19h\n\n**📅 SÁBADO:**\n09h às 16h\n\n**📅 DOMINGO:**\nSob consulta prévia\n\n**⚠️ INFORMAÇÕES IMPORTANTES:**\n✅ Atendimento exclusivamente com agendamento\n✅ Feriados: funcionamento sob consulta\n✅ Atendimento domiciliar: taxa extra por região\n✅ Reagendamento: até 24h antes sem custo\n\n**📍 LOCALIZAÇÃO:**\nHospital Ernesto Dornelles\nPorto Alegre - RS\n\n**📞 EMERGÊNCIA/ÚLTIMA HORA:**\nWhatsApp: (11) 99999-9999\n\nPrecisa agendar? Chama no WhatsApp! 📱`,
+        actions: [
+          { text: '📱 Agendar Agora', action: 'whatsappDirect', param: 'Olá! Gostaria de verificar a disponibilidade de horários.' },
+          { text: '📍 Como Chegar', action: 'sendSuggestion', param: 'Onde vocês ficam?' },
+          { text: '🏠 Atendimento Domiciliar', action: 'sendSuggestion', param: 'Fazem atendimento em casa?' }
+        ]
+      },
+      'localização': {
+        keywords: ['onde', 'localização', 'endereço', 'local', 'fica', 'localizacao', 'endereco', 'lugar', 'sitio', 'como chegar', 'chegar', 'ir', 'vou', 'address', 'location', 'maps', 'mapa', 'gps', 'coordenadas', 'perto de', 'próximo', 'proximo', 'região', 'regiao', 'bairro', 'zona', 'area', 'referência', 'referencia', 'hospital', 'ernesto', 'dornelles', 'porto alegre', 'rs', 'rio grande do sul', 'sul', 'localize', 'encontrar', 'achar', 'buscar', 'procurar'],
+        answer: `📍 **Nossa Localização Completa:**\n\n**🏥 ENDEREÇO PRINCIPAL:**\n**Hospital Ernesto Dornelles**\nPorto Alegre - Rio Grande do Sul\n\n**🚗 COMO CHEGAR:**\n🔹 **De Carro:** Estacionamento disponível no local\n🔹 **Transporte Público:** Fácil acesso por ônibus\n🔹 **Uber/Taxi:** Use "Hospital Ernesto Dornelles" como referência\n🔹 **GPS:** Busque por "Hospital Ernesto Dornelles, Porto Alegre"\n\n**🗺️ REFERÊNCIAS PRÓXIMAS:**\n• Centro de Porto Alegre\n• Fácil acesso a todas as zonas da cidade\n• Localização conhecida e segura\n\n**🏠 ATENDIMENTO DOMICILIAR:**\n✅ **Também atendemos em sua casa!**\n💰 Taxa de deslocamento conforme região:\n• Zona Central: R$ 20\n• Zona Norte/Sul: R$ 30\n• Grande POA: R$ 50\n\n**📱 CONFIRME SUA REGIÃO:**\nWhatsApp: (11) 99999-9999\n\nVamos combinar o melhor local para você! 😊`,
+        actions: [
+          { text: '🏠 Atendimento em Casa', action: 'whatsappDirect', param: 'Olá! Gostaria de saber sobre atendimento domiciliar na minha região.' },
+          { text: '🚗 Ir ao Salão', action: 'whatsappDirect', param: 'Olá! Vou ao salão. Preciso confirmar o endereço completo.' },
+          { text: '📱 Ligar Agora', action: 'phoneCall', param: '11999999999' }
+        ]
+      },
+      'produtos': {
+        keywords: ['produtos', 'marcas', 'qualidade', 'usam', 'produto', 'marca', 'tipo', 'material', 'cosmético', 'cosmetico', 'maquiagem', 'base', 'batom', 'rímel', 'rimel', 'sombra', 'blush', 'pó', 'po', 'primer', 'corretivo', 'delineador', 'lápis', 'lapis', 'gloss', 'fixador', 'spray', 'pincel', 'esponja', 'aplicador', 'nacional', 'importado', 'profissional', 'duração', 'duracao', 'resistente', 'agua', 'prova', 'hipoalergenico', 'testado'],
+        answer: `💎 **Produtos Premium que Utilizamos:**\n\n**🏆 MARCAS INTERNACIONAIS:**\n• MAC Cosmetics (profissional)\n• L'Oréal Paris Pro\n• Urban Decay\n• Too Faced\n• Fenty Beauty\n\n**🇧🇷 MARCAS NACIONAIS:**\n• Ruby Rose Pro\n• Eudora Pro\n• Payot Professional\n• Vult Cosmética\n• Natura Una\n\n**✨ DIFERENCIAIS DE QUALIDADE:**\n🔸 Produtos hipoalergênicos testados\n🔸 Longa duração (8-12 horas)\n🔸 Resistente à água e suor\n🔸 Acabamento HD para fotos\n🔸 Cores exclusivas para cada tom de pele\n\n**🛡️ GARANTIA TOTAL:**\nSó usamos produtos aprovados pela ANVISA!\n\n**🎨 CONSULTORIA GRATUITA:**\nTe ajudamos a escolher os melhores produtos para sua pele!`,
+        actions: [
+          { text: '🛍️ Produtos para Comprar', action: 'sendSuggestion', param: 'Vendem produtos?' },
+          { text: '🧪 Teste de Alergia', action: 'whatsappDirect', param: 'Gostaria de fazer um teste de alergia antes do procedimento.' },
+          { text: '💄 Consultoria Personalizada', action: 'sendSuggestion', param: 'Fazem consultoria?' }
+        ]
+      },
+      'depoimentos': {
+        keywords: ['depoimentos', 'avaliações', 'comentários', 'opiniões', 'avaliacoes', 'comentarios', 'opiniao', 'feedback', 'review', 'experiencia', 'experiência', 'satisfação', 'satisfacao', 'recomenda', 'recomendacao', 'indica', 'indicacao', 'qualidade', 'nota', 'estrelas', 'clientes', 'clientas', 'testemunho', 'relato'],
+        answer: `⭐ **O que Nossas Clientes Dizem:**\n\n**🏆 4.9/5 ESTRELAS** (150+ avaliações)\n\n**💬 DEPOIMENTOS RECENTES:**\n\n*"Profissional incrível! Minha maquiagem de noiva durou 14 horas perfeita!"* - Ana Clara ⭐⭐⭐⭐⭐\n\n*"Micropigmentação das sobrancelhas ficou PERFEITA! Super recomendo!"* - Mariana Santos ⭐⭐⭐⭐⭐\n\n*"Atendimento domiciliar impecável. Pontualidade e qualidade!"* - Fernanda Lima ⭐⭐⭐⭐⭐\n\n*"Melhor investimento para meu casamento. Sofia é um amor!"* - Juliana Costa ⭐⭐⭐⭐⭐\n\n**📊 NOSSOS NÚMEROS:**\n• 7+ anos de experiência\n• 450+ clientes atendidas\n• 150+ avaliações 5 estrelas\n• 98% de satisfação\n• 85% retornam para novos serviços\n\n**🎖️ CERTIFICAÇÕES:**\n✅ Curso Profissional de Maquiagem\n✅ Especialização em Noivas\n✅ Certificado em Micropigmentação\n\nQuer fazer parte dessa família? 💕`,
+        actions: [
+          { text: '📸 Ver Trabalhos no Instagram', action: 'socialMedia', param: 'instagram' },
+          { text: '📱 Agendar Meu Horário', action: 'whatsappDirect', param: 'Olá! Vi os depoimentos e fiquei interessada. Gostaria de agendar.' },
+          { text: '💬 Deixar Meu Depoimento', action: 'sendSuggestion', param: 'Como faço para avaliar?' }
+        ]
+      },
+      'domiciliar': {
+        keywords: ['domiciliar', 'casa', 'em casa', 'domicilio', 'residencia', 'residência', 'vão', 'vao', 'vem', 'vem aqui', 'vai', 'atende', 'atendem', 'deslocam', 'visitam', 'home', 'delivery', 'taxi', 'uber', 'transporte', 'locomocao', 'locomoção'],
+        answer: `🏠 **Atendimento Domiciliar VIP:**\n\n**✅ SIM! Vamos até você!**\n\n**🚗 COMO FUNCIONA:**\n• Levamos todos os equipamentos profissionais\n• Ambiente montado na sua casa\n• Conforto total para você\n• Ideal para noivas e eventos\n\n**💰 INVESTIMENTO POR REGIÃO:**\n🔸 **Zona Central POA:** + R$ 20\n🔸 **Zona Norte/Sul:** + R$ 30\n🔸 **Grande Porto Alegre:** + R$ 50\n🔸 **Interior (até 50km):** + R$ 80\n\n**⏰ CONDIÇÕES:**\n• Agendamento mínimo: 24h\n• Horário: 08h às 18h\n• Pagamento: cartão ou Pix\n• Kit completo incluído\n\n**🎯 IDEAL PARA:**\n• Noivas no dia do casamento\n• Eventos em casa\n• Pessoas com mobilidade reduzida\n• Quem prefere comodidade\n\n**📱 AGENDE AGORA:**\nWhatsApp: (11) 99999-9999\n\nVamos até você com todo carinho! 💕`,
+        actions: [
+          { text: '📍 Consultar Minha Região', action: 'whatsappDirect', param: 'Olá! Gostaria de saber o valor do atendimento domiciliar na minha região.' },
+          { text: '👰 Noiva em Casa', action: 'whatsappDirect', param: 'Olá! Sou noiva e gostaria de atendimento domiciliar no dia do casamento.' },
+          { text: '🗓️ Agendar Domiciliar', action: 'sendSuggestion', param: 'Como agendar atendimento em casa?' }
+        ]
+      },
+      'pagamento': {
+        keywords: ['pagamento', 'forma', 'formas', 'pagar', 'dinheiro', 'cartão', 'cartao', 'débito', 'debito', 'crédito', 'credito', 'pix', 'transferência', 'transferencia', 'parcelamento', 'parcela', 'parcelas', 'desconto', 'promoção', 'promocao', 'cupom', 'vale', 'entrada', 'sinal', 'adiantamento'],
+        answer: `💳 **Formas de Pagamento:**\n\n**💰 OPÇÕES DISPONÍVEIS:**\n\n🔸 **PIX** *(10% desconto à vista)*\n🔸 **Dinheiro** *(5% desconto à vista)*\n🔸 **Cartão de Débito**\n🔸 **Cartão de Crédito** *(até 3x sem juros)*\n🔸 **Transferência Bancária**\n\n**💎 PROMOÇÕES ATIVAS:**\n\n🎁 **CUPOM SOFIA10:** 10% off primeira visita\n🎁 **COMBO NOIVA:** 15% off pacote completo\n🎁 **INDICAÇÃO:** R$ 20 de desconto para você e sua amiga\n\n**📋 POLÍTICA DE PAGAMENTO:**\n• Entrada: 50% no agendamento\n• Restante: no dia do serviço\n• Remarque: até 24h sem taxa\n• Cancelamento: até 48h (estorno integral)\n\n**🛡️ SEGURANÇA TOTAL:**\n• Nota fiscal sempre emitida\n• Recibo detalhado\n• Garantia dos serviços\n\n**💝 VALE-PRESENTE:**\nTemos vale-presente para todas as ocasiões!\n\nPagamento facilitado para sua comodidade! 😊`,
+        actions: [
+          { text: '🎁 Comprar Vale-Presente', action: 'whatsappDirect', param: 'Gostaria de comprar um vale-presente. Como funciona?' },
+          { text: '💳 Parcelar Serviço', action: 'whatsappDirect', param: 'Gostaria de saber sobre parcelamento no cartão.' },
+          { text: '📊 Usar Cupom SOFIA10', action: 'sendSuggestion', param: 'Como usar o cupom de desconto?' }
+        ]
+      },
+      'noivas': {
+        keywords: ['noiva', 'casamento', 'casou', 'casar', 'wedding', 'bride', 'matrimonio', 'matrimônio', 'cerimonia', 'cerimônia', 'igreja', 'cartório', 'cartorio', 'festa', 'recepção', 'recepcao', 'madrinha', 'madrinhas', 'dama', 'damas', 'cortejo', 'bouquet'],
+        answer: `👰 **Especialistas em Noivas:**\n\n**💒 PACOTE NOIVA COMPLETA:**\n• Prova de maquiagem (inclusa)\n• Maquiagem do grande dia\n• Penteado romântico\n• Cílios fio a fio\n• Design de sobrancelhas\n• Retoque para festa\n**💰 Investimento:** R$ 280 *(economize R$ 70)*\n\n**👸 APENAS MAQUIAGEM:**\n• Maquiagem HD para fotos\n• Longa duração (12h+)\n• Prova gratuita inclusa\n**💰 Investimento:** R$ 150\n\n**💕 MADRINHAS E DAMAS:**\n• Desconto progressivo por quantidade\n• 2-4 pessoas: 10% desconto\n• 5+ pessoas: 15% desconto\n\n**🏠 ATENDIMENTO ESPECIAL:**\n• Vamos até você no dia do casamento\n• Kit de retoque para a noiva\n• Acompanhamento até a cerimônia\n• Fotos do making of\n\n**📅 CRONOGRAMA IDEAL:**\n• 60 dias: agendar prova\n• 30 dias: confirmar detalhes\n• 7 dias: reconfirmação\n• Dia C: realização dos sonhos!\n\n**✨ DIFERENCIAIS:**\n• 95% das noivas nos recomendam\n• Especialização em casamentos\n• Produtos premium resistentes\n• Experiência de 7+ anos\n\nSeu casamento será perfeito! 💕`,
+        actions: [
+          { text: '💒 Agendar Prova', action: 'whatsappDirect', param: 'Olá! Sou noiva e gostaria de agendar uma prova de maquiagem.' },
+          { text: '👯 Orçamento Madrinhas', action: 'whatsappDirect', param: 'Gostaria de orçamento para maquiagem de madrinhas.' },
+          { text: '📸 Ver Trabalhos de Noivas', action: 'socialMedia', param: 'instagram' }
+        ]
+      },
+      'obrigada': {
+        keywords: ['obrigada', 'obrigado', 'obg', 'brigada', 'brigado', 'valeu', 'thanks', 'thank you', 'agradeço', 'agradeco', 'grata', 'grato', 'muito obrigada', 'muito obrigado'],
+        answer: `😊 **Fico muito feliz em ajudar!**\n\nFoi um prazer conversar com você! 💕\n\n**🌟 Lembre-se:**\n• Estou sempre aqui para ajudar\n• Use o cupom **SOFIA10** na primeira visita\n• Siga nosso Instagram @imperiomdbeauty\n\n**📱 Próximos passos:**\n• WhatsApp: (11) 99999-9999\n• Agende com antecedência\n• Compartilhe com suas amigas\n\n**✨ No Império MD Beauty Lounge, cada cliente é única e especial!**\n\nVolte sempre que precisar! Beijinhos! 💋`,
+        actions: [
+          { text: '📱 Ir para WhatsApp', action: 'whatsappDirect', param: 'Olá! Conversei com a Sofia e gostaria de agendar.' },
+          { text: '📸 Seguir Instagram', action: 'socialMedia', param: 'instagram' },
+          { text: '🔄 Fazer Nova Pergunta', action: 'restartChat', param: '' }
+        ]
+      },
+      'erro': {
+        keywords: ['não entendi', 'nao entendi', 'erro', 'bug', 'problema', 'não funciona', 'nao funciona', 'ajuda', 'socorro', 'não sei', 'nao sei', 'perdida', 'confusa', 'como', 'what'],
+        answer: `😅 **Ops! Não entendi sua pergunta...**\n\n**🤔 Talvez você queira saber sobre:**\n\n🔸 Preços e valores\n🔸 Serviços oferecidos\n🔸 Como agendar\n🔸 Localização e endereço\n🔸 Horários de funcionamento\n🔸 Atendimento domiciliar\n🔸 Formas de pagamento\n🔸 Especiais para noivas\n\n**💡 DICAS:**\n• Seja mais específica na pergunta\n• Use palavras-chave simples\n• Ou clique nos botões de sugestão\n\n**👩‍💻 FALAR COM HUMANO:**\nSe preferir, fale direto conosco:\nWhatsApp: (11) 99999-9999\n\nEstou aqui para ajudar! 😊`,
+        actions: [
+          { text: '💰 Ver Preços', action: 'sendSuggestion', param: 'preços' },
+          { text: '📍 Localização', action: 'sendSuggestion', param: 'onde fica' },
+          { text: '📱 Falar no WhatsApp', action: 'whatsappDirect', param: 'Olá! Preciso de ajuda com informações sobre os serviços.' }
+        ]
+      }
+    };
+
+    // Quiz personalizado
+    const quiz = {
+      questions: [
+        {
+          question: "Qual é a ocasião?",
+          options: [
+            { text: "Casamento (noiva)", points: { noiva: 10 } },
+            { text: "Festa/Evento social", points: { social: 8 } },
+            { text: "Dia a dia", points: { dia: 6 } },
+            { text: "Ensaio fotográfico", points: { editorial: 9 } }
+          ]
+        },
+        {
+          question: "Como você define seu estilo?",
+          options: [
+            { text: "Natural e discreto", points: { social: 5, dia: 8 } },
+            { text: "Marcante e glamouroso", points: { noiva: 8, editorial: 9 } },
+            { text: "Romântico e delicado", points: { noiva: 7, social: 6 } },
+            { text: "Moderno e ousado", points: { editorial: 8, social: 7 } }
+          ]
+        }
+      ],
+      currentQuestion: 0,
+      scores: { noiva: 0, social: 0, dia: 0, editorial: 0 }
+    };
+
+    function playSound() {
+      // Som de notificação sutil
+      if (typeof Audio !== 'undefined') {
+        const audio = new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEaAz2Yp+mR1');
+        audio.volume = 0.1;
+        audio.play().catch(() => {});
+      }
+    }
+
+    function toggleChat() {
+      isOpen = !isOpen;
+      chatWindow.style.display = isOpen ? 'flex' : 'none';
+      if (isOpen) {
+        chatNotification.style.display = 'none';
+        chatInput.focus();
+      }
+    }
+
+    function sendMessage() {
+      const message = chatInput.value.trim();
+      if (!message) return;
+      
+      addMessage(message, 'user');
+      chatInput.value = '';
+      
+      // Mostrar indicador de digitação
+      showTyping();
+      
+      // Simular tempo de resposta
+      setTimeout(() => {
+        hideTyping();
+        const response = getResponse(message);
+        addMessage(response, 'bot');
+      }, 1500);
+    }
+
+    function sendSuggestion(text) {
+      addMessage(text, 'user');
+      showTyping();
+      setTimeout(() => {
+        hideTyping();
+        const response = getResponse(text);
+        addMessage(response, 'bot');
+      }, 1000);
+    }
+
+    function addMessage(text, sender) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `message ${sender}`;
+      
+      // Adicionar timestamp para mensagens do bot
+      if (sender === 'bot') {
+        const timestamp = new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+        messageDiv.innerHTML = `${text.replace(/\n/g, '<br>')}<div class="message-time">${timestamp}</div>`;
+      } else {
+        messageDiv.innerHTML = text.replace(/\n/g, '<br>');
+      }
+      
+      chatMessages.appendChild(messageDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      
+      // Armazenar contexto da conversa
+      conversationContext.push({ sender, text, timestamp: Date.now() });
+      
+      // Manter apenas as últimas 10 mensagens no contexto
+      if (conversationContext.length > 10) {
+        conversationContext = conversationContext.slice(-10);
+      }
+    }
+
+    function showTyping() {
+      const typingDiv = document.createElement('div');
+      typingDiv.className = 'typing-indicator';
+      typingDiv.id = 'typing';
+      typingDiv.innerHTML = '<div class="typing-dots"><span></span><span></span><span></span></div>Sofia está digitando...';
+      chatMessages.appendChild(typingDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function hideTyping() {
+      const typing = document.getElementById('typing');
+      if (typing) typing.remove();
+    }
+
+    function getResponse(message) {
+      const lowerMessage = message.toLowerCase();
+      
+      // Limpar acentos e caracteres especiais para melhor reconhecimento
+      const normalizedMessage = lowerMessage
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^\w\s]/g, ' ')
+        .trim();
+      
+      // Verificar padrões específicos primeiro
+      const patterns = {
+        greeting: /^(oi|ola|hello|ei|boa|bom|salve|fala)/,
+        question: /^(como|quando|onde|quanto|qual|quais|que|o que|porque|por que)/,
+        location: /(onde|localiza|fica|endereco|endereço|local|lugar|chegar|ir|vou)/,
+        price: /(preco|preço|valor|custa|quanto|dinheiro|pagar|pagamento|custo)/,
+        schedule: /(agendar|marcar|horario|horário|agendamento|reservar|disponibilidade)/,
+        service: /(servico|serviço|fazem|oferecem|trabalham|procedimento)/,
+        thanks: /(obrigad|brigad|valeu|thanks)/
+      };
+      
+      // Pontuação baseada em correspondências
+      let bestMatch = null;
+      let highestScore = 0;
+      
+      for (const [key, data] of Object.entries(responses)) {
+        let score = 0;
+        
+        // Verificar palavras-chave exatas
+        const exactMatches = data.keywords.filter(keyword => 
+          normalizedMessage.includes(keyword.normalize('NFD').replace(/[\u0300-\u036f]/g, ''))
+        );
+        score += exactMatches.length * 3;
+        
+        // Verificar palavras-chave parciais
+        const partialMatches = data.keywords.filter(keyword => {
+          const keywordNormalized = keyword.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+          return normalizedMessage.split(' ').some(word => 
+            word.includes(keywordNormalized) || keywordNormalized.includes(word)
+          );
+        });
+        score += partialMatches.length * 1;
+        
+        // Verificar padrões especiais
+        if (key === 'saudacao' && patterns.greeting.test(normalizedMessage)) score += 5;
+        if (key === 'localização' && patterns.location.test(normalizedMessage)) score += 5;
+        if (key === 'preços' && patterns.price.test(normalizedMessage)) score += 5;
+        if (key === 'agendar' && patterns.schedule.test(normalizedMessage)) score += 5;
+        if (key === 'serviços' && patterns.service.test(normalizedMessage)) score += 5;
+        if (key === 'obrigada' && patterns.thanks.test(normalizedMessage)) score += 5;
+        
+        // Verificar se é uma pergunta
+        if (patterns.question.test(normalizedMessage)) score += 2;
+        
+        if (score > highestScore) {
+          highestScore = score;
+          bestMatch = data;
+        }
+      }
+      
+      // Se encontrou uma boa correspondência (score >= 3)
+      if (bestMatch && highestScore >= 3) {
+        // Tocar som de notificação
+        playSound();
+        return bestMatch.answer;
+      }
+      
+      // Resposta inteligente para casos não identificados
+      let smartResponse = `😊 **Olá! Sou a Sofia do Império MD Beauty Lounge!**\n\n`;
+      
+      if (patterns.greeting.test(normalizedMessage)) {
+        smartResponse += `Que bom te ver aqui! Como posso te ajudar hoje?\n\n`;
+      } else if (patterns.question.test(normalizedMessage)) {
+        smartResponse += `Interessante pergunta! Vou te ajudar com isso.\n\n`;
+      } else {
+        smartResponse += `Não entendi exatamente, mas posso te ajudar!\n\n`;
+      }
+      
+      smartResponse += `**🔍 Posso te ajudar com:**\n`;
+      smartResponse += `• 💰 Preços e valores\n`;
+      smartResponse += `• ✨ Serviços (maquiagem, sobrancelhas, cílios)\n`;
+      smartResponse += `• 📅 Agendamentos\n`;
+      smartResponse += `• � Localização (Hospital Ernesto Dornelles)\n`;
+      smartResponse += `• �🕒 Horários de funcionamento\n`;
+      smartResponse += `• 🏠 Atendimento domiciliar\n`;
+      smartResponse += `• 👰 Especiais para noivas\n\n`;
+      smartResponse += `**💬 Ou fale direto comigo:**\nWhatsApp: (11) 99999-9999\n\n`;
+      smartResponse += `Digite uma palavra-chave ou use os botões! �`;
+      
+      return smartResponse;
+    }
+
+    function handleKeyPress(event) {
+      if (event.key === 'Enter') {
+        sendMessage();
+      }
+    }
+
+    // Mostrar notificação após alguns segundos
+    setTimeout(() => {
+      if (!isOpen) {
+        chatNotification.style.display = 'flex';
+      }
+    }, 5000);
+
+    // Melhorias nos ícones sociais
+    document.addEventListener('DOMContentLoaded', function() {
+      // Adicionar efeitos sonoros aos ícones sociais (opcional)
+      const socialIcons = document.querySelectorAll('.whatsapp-btn, .instagram-btn, .facebook-btn');
+      
+      socialIcons.forEach(icon => {
+        icon.addEventListener('mouseenter', function() {
+          // Adicionar efeito de vibração sutil
+          if (navigator.vibrate) {
+            navigator.vibrate(50);
+          }
+        });
+        
+        icon.addEventListener('click', function() {
+          // Efeito de clique com vibração
+          if (navigator.vibrate) {
+            navigator.vibrate([100, 50, 100]);
+          }
+          
+          // Adicionar classe de clique temporária
+          this.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            this.style.transform = '';
+          }, 150);
+        });
+      });
+      
+      // Animar contador do WhatsApp de forma mais estável
+      const whatsappCounter = document.querySelector('.whatsapp-btn [style*="ff4757"]');
+      if (whatsappCounter) {
+        // Animação suave do contador a cada 10 segundos
+        setInterval(() => {
+          whatsappCounter.style.transform = 'scale(1.2)';
+          setTimeout(() => {
+            whatsappCounter.style.transform = 'scale(1)';
+          }, 200);
+        }, 10000);
+        
+        // Efeito de pulsação contínua mais sutil
+        whatsappCounter.style.transition = 'transform 0.2s ease-out';
+      }
+      
+      // Efeito de hover mais suave nos tooltips
+      const socialContainers = document.querySelectorAll('.social-icon-container');
+      socialContainers.forEach(container => {
+        const tooltip = container.querySelector('.social-tooltip');
+        let hoverTimeout;
+        
+        container.addEventListener('mouseenter', () => {
+          clearTimeout(hoverTimeout);
+          hoverTimeout = setTimeout(() => {
+            if (tooltip) {
+              tooltip.style.opacity = '1';
+              tooltip.style.transform = 'translateY(-50%) translateX(-10px)';
+            }
+          }, 300);
+        });
+        
+        container.addEventListener('mouseleave', () => {
+          clearTimeout(hoverTimeout);
+          if (tooltip) {
+            tooltip.style.opacity = '0';
+            tooltip.style.transform = 'translateY(-50%) translateX(0)';
+          }
+        });
+      });
+    });
+  </script>
+</div>
