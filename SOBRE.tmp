@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: black;
+        }
+
+        a {
+            font-size: clamp(1rem, 4vw, 36px);
+            color: rgb(253, 252, 252);
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: none;
+        }
+
+        .capa {
+            background-color: black;
+            /*width: 100%;*/
+            margin: 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+        }
+
+        
+        .capa img {
+            /*width: 100%;*/
+            height: auto;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+        }
+
+        
+
+        .capa-texto {
+            position: relative;
+            z-index: 40;
+            width: 100%;
+            text-align: center;
+            z-index: 51;
+        }
+
+        .logo {
+            position: fixed;
+            top: clamp(1vh, 2vh, 3vh);
+            left: clamp(1vw, 2vw, 3vw);
+            width: clamp(80px, 12vw, 200px);
+            height: auto;
+            z-index: 10;
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        #menu {
+            background-color: rgb(5, 5, 5);
+            border: 0.1px dotted black;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+            position: fixed;
+            top: clamp(1vh, 2vh, 3vh);
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: clamp(0.5rem, 2vw, 20px);
+            padding: clamp(0.5rem, 1.5vw, 15px);
+            border-radius: 30px;
+            z-index: 51;
+            width: auto;
+            max-width: clamp(60vw, 80vw, 90vw);
+        }
+
+        #menu a {
+            margin: 0;
+            font-size: clamp(0.9rem, 2.5vw, 24px);
+            white-space: nowrap;
+        }
+
+        .btn-agendar {
+            display: inline-block;
+            background-color: #25d366;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: clamp(0.8rem, 2vw, 16px);
+            padding: clamp(0.8rem, 2vw, 15px) clamp(1.5rem, 4vw, 30px);
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            position: fixed;
+            top: clamp(1vh, 2vh, 3vh);
+            right: clamp(1vw, 2vw, 3vw);
+            z-index: 51;
+        }
+
+        .btn-agendar:hover {
+            background-color: #26915f;
+            transform: translateY(-3px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-agendar:active {
+            transform: translateY(1px);
+        }
+
+        
+
+        /* Tablets e telas médias */
+        @media (max-width: 1024px) {
+            #menu {
+                max-width: 85vw;
+            }
+
+            .logo {
+                width: clamp(70px, 10vw, 150px);
+            }
+        }
+
+        /* Smartphones e telas pequenas */
+        @media (max-width: 768px) {
+            #menu {
+                max-width: 85vw;
+                gap: clamp(0.3rem, 1.5vw, 15px);
+                padding: clamp(0.4rem, 1vw, 12px);
+            }
+
+            #menu a {
+                font-size: clamp(0.75rem, 2vw, 16px);
+            }
+
+            .logo {
+                width: clamp(60px, 10vw, 120px);
+            }
+
+            .btn-agendar {
+                font-size: clamp(0.7rem, 1.8vw, 14px);
+                padding: clamp(0.6rem, 1.5vw, 12px) clamp(1rem, 3vw, 20px);
+            }
+        }
+
+        /* Telas muito pequenas */
+        @media (max-width: 480px) {
+            #menu {
+                max-width: 75vw;
+                gap: clamp(0.2rem, 1vw, 10px);
+                padding: clamp(0.3rem, 0.8vw, 8px);
+            }
+
+            #menu a {
+                font-size: clamp(0.65rem, 1.5vw, 12px);
+            }
+
+            .logo {
+                width: clamp(50px, 10vw, 100px);
+            }
+
+            .btn-agendar {
+                font-size: clamp(0.65rem, 1.5vw, 12px);
+                padding: clamp(0.5rem, 1vw, 10px) clamp(0.8rem, 2vw, 15px);
+            }
+        }
+
+        /* Estilos para H1 e Parágrafo */
+        .textoh1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: #ffffff;
+            text-align: center;
+            letter-spacing: 1.5px;
+            margin-bottom: clamp(1rem, 2vh, 1.5rem);
+            text-transform: uppercase;
+            position: relative;
+            z-index: 50;
+            line-height: 1.3;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            padding: 7%;
+            
+        }
+
+        .textop {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+            font-weight: 300;
+            color: #ffffff;
+            text-align: center;
+            line-height: 1.8;
+            max-width: clamp(80vw, 90vw, 800px);
+            margin: 0 auto;
+            letter-spacing: 0.5px;
+            position: relative;
+            padding-top: 0%;
+            z-index: 51;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            
+        }
+
+        .textoh1::after {
+            content: '';
+            display: block;
+            width: clamp(60px, 10vw, 150px);
+            height: 3px;
+            background: linear-gradient(to right, transparent, #d4af37, transparent);
+            margin: clamp(1rem, 2vh, 1.5rem) auto 0;
+        }
+
+        @media (max-width: 768px) {
+            .textoh1 {
+                font-size: clamp(1.5rem, 4vw, 2.5rem);
+                margin-top: clamp(1.5rem, 5vh, 2rem);
+            }
+
+            .textop {
+                font-size: clamp(0.8rem, 2vw, 1rem);
+                max-width: 85vw;
+            }
+        }
+
+         /* Redes Sociais */
+            .redes-sociais {
+                position: fixed;
+                right: clamp(1vw, 2vw, 3vw);
+                top: 50%;
+                transform: translateY(-50%);
+                display: flex;
+                flex-direction: column;
+                gap: clamp(1rem, 2vh, 1.5rem);
+                z-index: 100;
+            }
+
+            .redes-sociais a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: clamp(45px, 8vw, 60px);
+                height: clamp(45px, 8vw, 60px);
+                background: linear-gradient(135deg, #25d366, #128c7e);
+                color: white;
+                border-radius: 50%;
+                font-size: clamp(1.2rem, 3vw, 1.8rem);
+                transition: all 0.3s ease;
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+            }
+
+            .redes-sociais a.whatsapp {
+                background: linear-gradient(135deg, #25d366, #128c7e);
+            }
+
+            .redes-sociais a.instagram {
+                /*background: linear-gradient(135deg, #f77737, #feda75);*/
+                background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            }
+
+            .redes-sociais a.facebook {
+                background: linear-gradient(135deg, #1877f2, #0a66c2);
+            }
+
+            .redes-sociais a:hover {
+                transform: scale(1.1);
+                box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+            }
+
+            .redes-sociais a:active {
+                transform: scale(0.95);
+            }
+
+            @media (max-width: 768px) {
+                .redes-sociais {
+                    right: clamp(0.8vw, 1.5vw, 2vw);
+                    gap: clamp(0.8rem, 1.5vh, 1rem);
+                }
+
+                .redes-sociais a {
+                    width: clamp(40px, 7vw, 50px);
+                    height: clamp(40px, 7vw, 50px);
+                    font-size: clamp(1rem, 2.5vw, 1.5rem);
+                }
+            }
+
+            @media (max-width: 480px) {
+                .redes-sociais {
+                    right: 1vw;
+                    gap: 0.7rem;
+                }
+
+                .redes-sociais a {
+                    width: 45px;
+                    height: 45px;
+                    font-size: 1.2rem;
+                }
+            }
+
+       
+       
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="capa">
+        <img src="img/capa.jpg" width="800" alt="">
+        <div class="capa-texto flutuante">
+            <!--<img src="img/service-progressiva-jmuwccqH.jpg" style="width: 250px;">;-->
+            <h1 class="textoh1">ImperioMD Beauch Lounge</h1>;
+            <p class="textop" style="text-align: justify;">Biografia – Império MD Beauty
+                 Lounge
+            A Império MD Beauty Lounge nasceu de um sonho: proporcionar mais beleza,
+         autoestima e bem-estar ao universo feminino. Tudo começou com uma simples
+         ideia, movida pela paixão de cuidar das pessoas e pela certeza de que toda
+          mulher merece se sentir especial, confiante e valorizada.
+
+         Com dedicação, profissionalismo e muito amor pelo que faz, a Império MD Beauty 
+         Lounge transformou esse sonho em realidade, criando um espaço acolhedor onde 
+         cada cliente é recebida com carinho e atenção. Mais do que um salão de beleza,
+          a Império MD tornou-se um ambiente dedicado à valorização da beleza única de 
+          cada mulher, respeitando sua personalidade, estilo e essência.
+
+         Ao longo de sua trajetória, a busca constante pela excelência, inovação e 
+         qualidade nos serviços oferecidos consolidou a confiança de suas clientes e 
+         fortaleceu sua missão de elevar a autoestima através da beleza. Cada atendimento
+         é realizado com compromisso, cuidado e o desejo genuíno de proporcionar momentos
+         especiais e transformadores.
+
+         Hoje, a Império MD Beauty Lounge segue crescendo e evoluindo, mantendo vivos os 
+         valores que deram origem à sua história: amor, dedicação, respeito e a missão de 
+         fazer com que cada mulher descubra e realce o melhor de si. Afinal, para a 
+         Império MD, a beleza vai muito além da aparência — ela está na confiança, na
+          felicidade e no brilho que surge quando uma mulher se sente verdadeiramente bem 
+          consigo mesma.
+
+         Império MD Beauty Lounge – Transformando beleza em autoestima, e autoestima em
+          confiança. ✨💖
+       </div>
+    </div>
+
+    <div id="menu">    
+             
+            <a href="INDEX.html"style="margin-right: 20px;"> Home</a> 
+            <a href="SOBRE.html"style="margin-right: 20px;">Sobre</a> 
+            <a href=""style="margin-right: 20px;">Produtos</a> 
+            <a href=""style="margin-right: 20px;">Serviços</a> 
+            <a href=""style="margin-right: 20px;">Contato</a>             
+    </div>
+
+    <div>
+        <a href="https://wa.me/5551999999999" target="_blank "class="btn-agendar">Agendar Agora</a>
+    </div>
+
+    <div class="redes-sociais">
+        <a href="https://wa.me/5551991817667" target="_blank" class="whatsapp" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/imperio_mdbeautylounge/" target="_blank" class="instagram" title="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/imperio.md.2024" target="_blank" class="facebook" title="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+    </div>
+
+    <div class="logo">
+        <img src="img/logo2.png" width="800" alt="">  
+    </div>
+</body>
+</html>
