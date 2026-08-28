@@ -203,6 +203,28 @@ h2 {
   50% { box-shadow: 0 10px 24px rgba(214, 40, 40, 0.42); }
 }
 
+.video-highlight {
+  padding: 18px 0 0;
+  background: #ffffff;
+}
+
+.video-frame {
+  width: min(1296px, 90%);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid #111111;
+  border-radius: 18px;
+  background: #111111;
+  box-shadow: 0 18px 40px rgba(17, 17, 17, 0.18);
+}
+
+.video-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 558px;
+}
+
 .social-rail {
   position: fixed;
   right: 18px;
@@ -837,6 +859,20 @@ h2 {
 @media (max-width: 700px) {
   .container {
     width: min(100% - 24px, 520px);
+  }
+
+  .video-highlight {
+    padding-top: 10px;
+  }
+
+  .video-frame {
+    width: calc(100% - 20px);
+    border-radius: 12px;
+  }
+
+  .video-frame video {
+    height: auto;
+    max-height: 324px;
   }
 
   .nav-wrap {
